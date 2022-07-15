@@ -16,24 +16,17 @@ const Item = styled(Paper)(({ theme }) => ({
 const MovieList = ({ movies }) => {    
   console.log(movies);
   const movieCards = movies.map(m => {
-      return <MovieCard key={m.id} movie={m}/>
+      return (
+        <Grid item xs={3}>
+          <Item><MovieCard key={m.id} movie={m}/></Item>
+        </Grid>
+      )
   })
 
   return (
     <Box sx={{ flexGrow: 1 }} style={{ marginTop: "30px"}}>
       <Grid container spacing={4}>
-        <Grid item xs={3}>
-          <Item>xs=4</Item>
-        </Grid>
-        <Grid item xs={3}>
-          <Item>xs=4</Item>
-        </Grid>
-        <Grid item xs={3}>
-          <Item>xs=4</Item>
-        </Grid>
-        <Grid item xs={3}>
-          <Item>xs=4</Item>
-        </Grid>
+        { movieCards }
       </Grid>
     </Box>
   )
