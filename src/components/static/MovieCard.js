@@ -11,13 +11,13 @@ const MovieCard = ({ movie }) => {
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
-        height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
-        alt="green iguana"
+        height="500"
+        image={ movie.img_link }
+        alt={ movie.name }
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          { movie.name }
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Lizards are a widespread group of squamate reptiles, with over 6,000
