@@ -8,13 +8,38 @@ import { alpha, makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
+
+const drawerWidth =240;
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  drawer: {
+    [theme.breakpoints.up('sm')]: {
+      width: drawerWidth,
+      flexShrink: 0
+    }
+  },  
+  appBar: {
+    zIndex: theme.zIndex.drawer + 1,
+  },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(2)
+  },
+  toolbar: theme.mixins.toolbar,
+  drawerPaper: {
+    width: drawerWidth
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+  },
+  closeMenuButton: {
+    marginRight: 'auto',
+    marginLeft: 0,
   },
   title: {
     flexGrow: 1,
@@ -64,6 +89,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const handleDrawerToggle = () => {
+  // const genres = ['Action', 'Drama', 'Horror', 'Western', 'Romance', 'Science fiction']
+ 
+}
+
 const Navbar = () => {
   const classes = useStyles();
 
@@ -76,13 +106,15 @@ const Navbar = () => {
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
+            onClick={handleDrawerToggle}
           >
           <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Movie Genre
+            World of Movies
           </Typography>
-          <Button color="inherit">Create Movie</Button>
+          <Button color="inherit" component={ Link } to="/">Home</Button>
+          <Button color="inherit" component={ Link } to="/movies/new">Create Movie</Button>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
