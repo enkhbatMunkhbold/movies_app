@@ -14,10 +14,10 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const MovieList = ({ movies }) => {    
-  console.log(movies);
+  // console.log(movies);
   const movieCards = movies.map(m => {
       return (
-        <Grid item xs={3}>
+        <Grid key={m.id} item xs={3}>
           <Item><MovieCard key={m.id} movie={m}/></Item>
         </Grid>
       )

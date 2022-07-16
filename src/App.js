@@ -13,7 +13,7 @@ const App = () => {
     .then(list => setMovies(list))
   }, []) 
 
-  console.log(movies);
+  // console.log(movies);
 
   return (
     <Router>

@@ -89,6 +89,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const handleClick = (e) => {
+  console.log(e.target.value);
+}
+
 const handleDrawerToggle = () => {
   // const genres = ['Action', 'Drama', 'Horror', 'Western', 'Romance', 'Science fiction']
  
@@ -117,7 +121,7 @@ const Navbar = () => {
           <Button color="inherit" component={ Link } to="/movies/new">Create Movie</Button>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
-              <SearchIcon />
+              <SearchIcon/>
             </div>
             <InputBase
               placeholder="Search…"
@@ -126,6 +130,7 @@ const Navbar = () => {
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
+              onChange={handleClick}
             />
           </div>
         </Toolbar>
