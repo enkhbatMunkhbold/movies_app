@@ -1,11 +1,11 @@
 import React from 'react'
 import MovieList from './MovieList'
 
-const Home = () => {
+const Home = ({ movies }) => {
   return (
     <div>
       <h1>Welcome To World Of Movies!</h1>
-      <MovieList />
+      <MovieList movies={ movies }/>
     </div>
   )
 }

@@ -113,7 +113,7 @@ const Navbar = () => {
           <Typography className={classes.title} variant="h6" noWrap>
             World of Movies
           </Typography>
-          <Button color="inherit" component={ Link } to="/">Home</Button>
+          <Button color="inherit" component={ Link } to="/movies">Home</Button>
           <Button color="inherit" component={ Link } to="/movies/new">Create Movie</Button>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
