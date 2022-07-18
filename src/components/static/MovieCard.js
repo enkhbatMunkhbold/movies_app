@@ -7,38 +7,21 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import clsx from 'clsx';
-import Collapse from '@material-ui/core/Collapse';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     maxWidth: 345,
   },
   media: {
     height: 0,
-    paddingTop: '56.25%', // 16:9
-  },
-  expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: 'rotate(180deg)',
+    paddingTop: '56.25%', 
   }
 }));
 
 const MovieCard = ({ movie }) => {
 
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
   return (
     <Card className={classes.root}>
       <CardMedia
@@ -58,31 +41,14 @@ const MovieCard = ({ movie }) => {
           Year: { movie.year }
         </Typography>
         <Typography gutterBottom variant="p" component="div">
-          Rating: { movie.Rating }
-        </Typography>       
+          Rating: { movie.rating }
+        </Typography>   
       </CardContent>
       <CardActions>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
-        </IconButton>       
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
+        </IconButton>         
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>          
-          <Typography paragraph>
-           {movie.comment}
-          </Typography>         
-        </CardContent>
-      </Collapse>
     </Card>
   );
 }

@@ -89,17 +89,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const handleClick = (e) => {
-  console.log(e.target.value);
-}
-
 const handleDrawerToggle = () => {
   // const genres = ['Action', 'Drama', 'Horror', 'Western', 'Romance', 'Science fiction']
  
 }
 
-const Navbar = () => {
+const Navbar = ({ handleSubmit, setSearchMovie }) => {
   const classes = useStyles();
+
+  const handleClick = (e) => {
+    console.log(e.target.value);
+  }  
 
   return (
     <div className={classes.root}>
@@ -117,9 +117,9 @@ const Navbar = () => {
           <Typography className={classes.title} variant="h6" noWrap>
             World of Movies
           </Typography>
-          <Button color="inherit" component={ Link } to="/movies">Home</Button>
+          <Button color="inherit" component={ Link } to="/">Home</Button>
           <Button color="inherit" component={ Link } to="/movies/new">Create Movie</Button>
-          <div className={classes.search}>
+          <div className={classes.search} onSubmit={handleSubmit}>
             <div className={classes.searchIcon}>
               <SearchIcon/>
             </div>

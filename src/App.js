@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
   const [movies, setMovies] = useState([])
+  const [searchMovie, setSearchMovie] = useState(null)
   
   useEffect(() => {
     fetch('http://localhost:3001/movies')
@@ -13,13 +14,23 @@ const App = () => {
     .then(list => setMovies(list))
   }, []) 
 
-  // console.log(movies);
+  const handleSubmit = (e) => {
+    console.log("e.target:", e.target);
+    e.preventDefault()
+    fetch(`http://www.omdbapi.com/?t=${searchMovie}&apikey=19546fcd`)
+    .then(res => res.json())
+    .then(movieData => {
+      setSearchMovie(movieData)
+      setMovies([...movies, searchMovie])
+    })
+  }
+  console.log('Movies:', movies);
 
   return (
     <Router>
-      <Navbar />
+      <Navbar handleSubmit={handleSubmit} setSearchMovie={setSearchMovie}/>
       <Routes>
-        <Route path="/movies" element={<Home movies={ movies }/>} />
+        <Route path="/" element={<Home movies={ movies }/>} />
         <Route path="/movies/new" element={<NewMovie />} />
       </Routes>      
     </Router>
