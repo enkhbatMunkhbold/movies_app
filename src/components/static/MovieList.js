@@ -13,8 +13,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const MovieList = ({ movies }) => {    
-  // console.log(movies);
+const MovieList = ({ movies }) => { 
   const movieCards = movies.map(m => {
       return (
         <Grid key={m.id} item xs={3}>

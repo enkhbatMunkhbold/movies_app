@@ -7,6 +7,28 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const App = () => {
   const [movies, setMovies] = useState([])
   const [searchMovie, setSearchMovie] = useState(null)
+
+  const handleAddMovie = (m) => {
+    console.log("Handle movie:", m);
+    const movieData = {
+      name: m.Title,
+      img_link: m.Poster,
+      genre: m.Genre,
+      year: m.Year,
+      rating: m.Ratings[0].Value
+    }
+
+    console.log("MovieData:", movieData);
+
+    fetch(`http://localhost:3001/movies`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'  
+      },
+      body: JSON.stringify(movieData)
+    }).then( res => res.json())
+      .then(data => console.log('data', data))
+  }
   
   useEffect(() => {
     fetch('http://localhost:3001/movies')
@@ -15,20 +37,24 @@ const App = () => {
   }, []) 
 
   const handleSubmit = (e) => {
-    console.log("e.target:", e.target);
     e.preventDefault()
+   
     fetch(`http://www.omdbapi.com/?t=${searchMovie}&apikey=19546fcd`)
     .then(res => res.json())
     .then(movieData => {
       setSearchMovie(movieData)
       setMovies([...movies, searchMovie])
-    })
+      handleAddMovie(movieData)
+    })    
   }
-  console.log('Movies:', movies);
 
   return (
     <Router>
-      <Navbar handleSubmit={handleSubmit} setSearchMovie={setSearchMovie}/>
+      <Navbar 
+        handleSubmit={handleSubmit} 
+        setSearchMovie={setSearchMovie} 
+        searchMovie={searchMovie}
+      />
       <Routes>
         <Route path="/" element={<Home movies={ movies }/>} />
         <Route path="/movies/new" element={<NewMovie />} />

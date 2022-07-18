@@ -9,6 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
+// import Search from '@material-ui/icons/Search';
 
 const drawerWidth =240;
 
@@ -94,11 +95,11 @@ const handleDrawerToggle = () => {
  
 }
 
-const Navbar = ({ handleSubmit, setSearchMovie }) => {
+const Navbar = ({ handleSubmit, searchMovie, setSearchMovie }) => {
   const classes = useStyles();
 
   const handleClick = (e) => {
-    console.log(e.target.value);
+    setSearchMovie(e.target.value);
   }  
 
   return (
@@ -119,19 +120,21 @@ const Navbar = ({ handleSubmit, setSearchMovie }) => {
           </Typography>
           <Button color="inherit" component={ Link } to="/">Home</Button>
           <Button color="inherit" component={ Link } to="/movies/new">Create Movie</Button>
-          <div className={classes.search} onSubmit={handleSubmit}>
+          <div className={classes.search}>  
+          <form onSubmit={handleSubmit}>
             <div className={classes.searchIcon}>
-              <SearchIcon/>
+              <SearchIcon />
             </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-              onChange={handleClick}
-            />
+              <InputBase
+                placeholder="Search…"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+                inputProps={{ 'aria-label': 'search' }}
+                onChange={handleClick}
+              />
+          </form>  
           </div>
         </Toolbar>
       </AppBar>
