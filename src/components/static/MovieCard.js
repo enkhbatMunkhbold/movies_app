@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import Card from '@mui/material/Card';
 import { makeStyles } from '@material-ui/core/styles';
 import CardActions from '@mui/material/CardActions';
@@ -20,7 +21,12 @@ const useStyles = makeStyles(() => ({
 
 const MovieCard = ({ movie }) => {
 
+  // const [favorite, setFavorite] = useState(0)
   const classes = useStyles();
+
+  const handleClick = (e) => {
+    console.log(e.target);
+  }
 
   return (
     <Card className={classes.root}>
@@ -44,7 +50,7 @@ const MovieCard = ({ movie }) => {
           Rating: { movie.rating }
         </Typography>   
       </CardContent>
-      <CardActions>
+      <CardActions onClick={handleClick}>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton>         

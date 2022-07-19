@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 import MovieCard from "./MovieCard";
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  backgroundColor: '#1A2027',
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
@@ -23,7 +23,7 @@ const MovieList = ({ movies }) => {
   })
 
   return (
-    <Box sx={{ flexGrow: 1 }} style={{ marginTop: "30px"}}>
+    <Box sx={{ flexGrow: 1 }} style={{ paddingTop: "30px" }}>
       <Grid container spacing={4}>
         { movieCards }
       </Grid>

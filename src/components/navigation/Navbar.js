@@ -95,7 +95,7 @@ const handleDrawerToggle = () => {
  
 }
 
-const Navbar = ({ handleSubmit, searchMovie, setSearchMovie }) => {
+const Navbar = ({ handleSubmit, setSearchMovie }) => {
   const classes = useStyles();
 
   const handleClick = (e) => {
