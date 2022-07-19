@@ -3,10 +3,13 @@ import Navbar from "./components/navigation/Navbar";
 import Home from "./components/static/Home";
 import NewMovie from "./components/static/NewMovie";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+require('dotenv').config();
 
 const App = () => {
   const [movies, setMovies] = useState([])
   const [searchMovie, setSearchMovie] = useState(null)
+
+  const api_key = process.env.OMDb_API_KEY
 
   const handleAddMovie = (m) => {
     console.log("Handle movie:", m);
@@ -19,6 +22,7 @@ const App = () => {
     }
 
     console.log("MovieData:", movieData);
+    console.log('Movies:', movies);
 
     fetch(`http://localhost:3001/movies`, {
       method: 'POST',
@@ -27,7 +31,7 @@ const App = () => {
       },
       body: JSON.stringify(movieData)
     }).then( res => res.json())
-      .then(data => console.log('data', data))
+      .then(data => setMovies([...movies, data]))
   }
   
   useEffect(() => {
@@ -39,11 +43,10 @@ const App = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
    
-    fetch(`http://www.omdbapi.com/?t=${searchMovie}&apikey=19546fcd`)
+    fetch(`http://www.omdbapi.com/?t=${searchMovie}&apikey=${api_key}`)
     .then(res => res.json())
     .then(movieData => {
-      setSearchMovie(movieData)
-      setMovies([...movies, searchMovie])
+      console.log('Search Movie:', movieData);
       handleAddMovie(movieData)
     })    
   }
@@ -53,7 +56,6 @@ const App = () => {
       <Navbar 
         handleSubmit={handleSubmit} 
         setSearchMovie={setSearchMovie} 
-        searchMovie={searchMovie}
       />
       <Routes>
         <Route path="/" element={<Home movies={ movies }/>} />
