@@ -3,7 +3,6 @@ import Navbar from "./components/navigation/Navbar";
 import Home from "./components/static/Home";
 import NewMovie from "./components/static/NewMovie";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-require('dotenv').config();
 
 const App = () => {
   const [movies, setMovies] = useState([])
