@@ -119,6 +119,102 @@
       "year": "1985",
       "rating": "7.2/10",
       "id": 20
+    },
+    {
+      "name": "Stay",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMjdkNzk1MTUtZGVlYS00MzgyLWFkZjYtMWI4ODg3MzEyNmY4XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg",
+      "genre": "Drama, Mystery, Thriller",
+      "year": "2005",
+      "rating": "6.7/10",
+      "id": 21
+    },
+    {
+      "name": "Girl, Interrupted",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BNzdjZDYwM2QtMGNlZS00MGQzLTlhMjctYTU4NWI5MWJlYmQwXkEyXkFqcGdeQXVyMTAwMzUyOTc@._V1_SX300.jpg",
+      "genre": "Biography, Drama",
+      "year": "1999",
+      "rating": "7.3/10",
+      "id": 22
+    },
+    {
+      "name": "Mr. Nobody",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMTg4ODkzMDQ3Nl5BMl5BanBnXkFtZTgwNTEwMTkxMDE@._V1_SX300.jpg",
+      "genre": "Drama, Fantasy, Romance",
+      "year": "2009",
+      "rating": "7.8/10",
+      "id": 23
+    },
+    {
+      "name": "The Notebook",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMTk3OTM5Njg5M15BMl5BanBnXkFtZTYwMzA0ODI3._V1_SX300.jpg",
+      "genre": "Drama, Romance",
+      "year": "2004",
+      "rating": "7.8/10",
+      "id": 24
+    },
+    {
+      "name": "The East",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMTYwNTk0NTEwOF5BMl5BanBnXkFtZTcwMDMzNDUyOQ@@._V1_SX300.jpg",
+      "genre": "Crime, Drama, Thriller",
+      "year": "2013",
+      "rating": "6.8/10",
+      "id": 25
+    },
+    {
+      "name": "Gia",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BOWU4MTdmZWQtZGQ2Mi00Zjc0LThiNDAtNTY2NDZkMzAwNWJlXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
+      "genre": "Biography, Drama, Romance",
+      "year": "1998",
+      "rating": "6.9/10",
+      "id": 26
+    },
+    {
+      "name": "Lost and Delirious",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BNjVhZDc5YjItNzU0OS00MGE4LTliNWYtYWFjOGEzNjkwY2ViXkEyXkFqcGdeQXVyMTY5Nzc4MDY@._V1_SX300.jpg",
+      "genre": "Drama, Romance",
+      "year": "2001",
+      "rating": "6.8/10",
+      "id": 27
+    },
+    {
+      "name": "The Ring",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BNDA2NTg2NjE4Ml5BMl5BanBnXkFtZTYwMjYxMDg5._V1_SX300.jpg",
+      "genre": "Horror, Mystery",
+      "year": "2002",
+      "rating": "7.1/10",
+      "id": 28
+    },
+    {
+      "name": "The Grudge",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMjIxODg1Nzc3NF5BMl5BanBnXkFtZTcwMjM0MjEzMw@@._V1_SX300.jpg",
+      "genre": "Horror, Mystery, Thriller",
+      "year": "2004",
+      "rating": "5.9/10",
+      "id": 29
+    },
+    {
+      "name": "Finding Nemo",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BZTAzNWZlNmUtZDEzYi00ZjA5LWIwYjEtZGM1NWE1MjE4YWRhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+      "genre": "Animation, Adventure, Comedy",
+      "year": "2003",
+      "rating": "8.2/10",
+      "id": 30
+    },
+    {
+      "name": "Home Alone",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+      "genre": "Comedy, Family",
+      "year": "1990",
+      "rating": "7.7/10",
+      "id": 31
+    },
+    {
+      "name": "Mulan",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BODkxNGQ1NWYtNzg0Ny00Yjg3LThmZTItMjE2YjhmZTQ0ODY5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "genre": "Animation, Adventure, Comedy",
+      "year": "1998",
+      "rating": "7.6/10",
+      "id": 32
     }
   ]
 }
