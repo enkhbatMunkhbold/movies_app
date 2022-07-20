@@ -3,13 +3,15 @@ import Navbar from "./components/navigation/Navbar";
 import Home from "./components/static/Home";
 import NewMovie from "./components/static/NewMovie";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { MY_API_KEY } from "../config";
 
 const App = () => {
   const [movies, setMovies] = useState([])
   const [searchMovie, setSearchMovie] = useState(null)
 
-  const api_key = process.env.OMDb_API_KEY
+  // console.log(process.env.OMDb_API_KEY)
 
+  const api_key = process.env.OMDb_API_KEY
   const handleAddMovie = (m) => {
     console.log("Handle movie:", m);
     const movieData = {
