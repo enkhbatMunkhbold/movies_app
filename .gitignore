@@ -24,3 +24,4 @@ yarn-error.log*
 
 NOTES.md
 config.js
+.env

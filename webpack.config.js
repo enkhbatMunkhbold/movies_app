@@ -32,7 +32,16 @@ module.exports = {
     }]
   },
   plugins: [
-    new Dotenv()
+    new Dotenv({
+      path: './.env',
+      safe: true,
+      allowEmptyValues: true,
+      systemvars: true,
+      silent: true,
+      defaults: false,
+      prefix: 'import.meta.env'
+
+    })
   ],
   resolve: {
     extensions: ['.json', '.js', '.jsx']

@@ -103,7 +103,7 @@
       "year": "1982",
       "rating": "6.8/10",
       "id": 16
-    },   
+    },
     {
       "name": "Annie Hall",
       "img_link": "https://m.media-amazon.com/images/M/MV5BZDg1OGQ4YzgtM2Y2NS00NjA3LWFjYTctMDRlMDI3NWE1OTUyXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg",
@@ -111,6 +111,14 @@
       "year": "1977",
       "rating": "8.0/10",
       "id": 19
+    },
+    {
+      "name": "Mask",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BYTVlYjExOWEtZmU5Yy00N2VjLWJmY2UtZjZiYzMzYzhhYjNiXkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_SX300.jpg",
+      "genre": "Biography, Drama",
+      "year": "1985",
+      "rating": "7.2/10",
+      "id": 20
     }
   ]
 }
