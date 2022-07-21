@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState } from 'react';
 import Card from '@mui/material/Card';
 import { makeStyles } from '@material-ui/core/styles';
 import CardActions from '@mui/material/CardActions';
@@ -20,15 +19,14 @@ const useStyles = makeStyles(() => ({
 }));
 
 const MovieCard = ({ movie, handleUpdate }) => {
-  const {id, name, img_link, genre, year, rating} = movie
+  const {id, name, img_link, genre, year, rating, favorite} = movie
 
-  const [favorite, setFavorite] = useState(false)
   const classes = useStyles();
  
   const handleClick = () => {
 
     // console.log('MOVIE:', movie)
-    setFavorite(favorite => !favorite)
+    // setFavorite(favorite => !favorite)
     fetch(`http://localhost:3001/movies/${id}`, {
       method: "PATCH",
       headers: {
@@ -66,8 +64,8 @@ const MovieCard = ({ movie, handleUpdate }) => {
         </Typography>   
       </CardContent>
       <CardActions>
-        <IconButton aria-label="add to favorites" onClick={handleClick}>
-          <FavoriteIcon color={favorite ? 'secondary' : 'inherit'} />
+        <IconButton aria-label="add to favorites" color={favorite ? 'secondary' : 'inherit'} onClick={handleClick}>
+          <FavoriteIcon/>
         </IconButton>         
       </CardActions>
     </Card>
