@@ -13,11 +13,17 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const MovieList = ({ movies }) => { 
+const MovieList = ({ movies, setMovies }) => { 
+
+  const handleUpdate = (movieObject) => {
+    const list = movies.map(m => m.id === movieObject.id ? movieObject : m)
+    setMovies(list)
+  }
+
   const movieCards = movies.map(m => {
       return (
         <Grid key={m.id} item xs={3}>
-          <Item><MovieCard key={m.id} movie={m}/></Item>
+          <Item><MovieCard key={m.id} movie={m} handleUpdate={handleUpdate} /></Item>
         </Grid>
       )
   })

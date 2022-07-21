@@ -25,7 +25,7 @@ const App = () => {
         setMovies={setMovies} 
       />
       <Routes>
-        <Route path="/" element={<Home movies={ movies }/>} />
+        <Route path="/" element={<Home movies={ movies } setMovies={setMovies} />} />
         <Route path="/movies/new" element={<NewMovie />} />
       </Routes>      
     </Router>

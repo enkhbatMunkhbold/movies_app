@@ -57,7 +57,8 @@ const Search = ({ movies, setMovies }) => {
       img_link: m.Poster,
       genre: m.Genre,
       year: m.Year,
-      rating: m.Ratings[0].Value
+      rating: m.Ratings[0].Value,
+      favorite: false
     }
 
     // console.log("MovieData:", movieData);

@@ -1,5 +1,5 @@
 import * as React from 'react';
-// import { useState } from 'react';
+import { useState } from 'react';
 import Card from '@mui/material/Card';
 import { makeStyles } from '@material-ui/core/styles';
 import CardActions from '@mui/material/CardActions';
@@ -19,13 +19,28 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, handleUpdate }) => {
+  const {id, name, img_link, genre, year, rating} = movie
 
-  // const [favorite, setFavorite] = useState(0)
+  const [favorite, setFavorite] = useState(false)
   const classes = useStyles();
+ 
+  const handleClick = () => {
 
-  const handleClick = (e) => {
-    console.log(e.target);
+    // console.log('MOVIE:', movie)
+    setFavorite(favorite => !favorite)
+    fetch(`http://localhost:3001/movies/${id}`, {
+      method: "PATCH",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        favorite: !favorite 
+      })
+    }).then(res => res.json())
+      .then(movieData => {
+        handleUpdate(movieData)
+      })
   }
 
   return (
@@ -33,26 +48,26 @@ const MovieCard = ({ movie }) => {
       <CardMedia
         component="img"
         height="500"
-        image={ movie.img_link }
-        alt={ movie.name }
+        image={ img_link }
+        alt={ name }
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          { movie.name }
+          { name }
         </Typography>
         <Typography gutterBottom variant="p" component="div">
-          Genre: { movie.genre }
+          Genre: { genre }
         </Typography>
         <Typography gutterBottom variant="p" component="div">
-          Year: { movie.year }
+          Year: { year }
         </Typography>
         <Typography gutterBottom variant="p" component="div">
-          Rating: { movie.rating }
+          Rating: { rating }
         </Typography>   
       </CardContent>
-      <CardActions onClick={handleClick}>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+      <CardActions>
+        <IconButton aria-label="add to favorites" onClick={handleClick}>
+          <FavoriteIcon color={favorite ? 'secondary' : 'inherit'} />
         </IconButton>         
       </CardActions>
     </Card>
