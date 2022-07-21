@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -8,7 +8,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import Search from '../static/Search'
-// import Search from '@material-ui/icons/Search';
+import { Menu, MenuItem } from '@material-ui/core';
 
 const drawerWidth =240;
 
@@ -49,13 +49,42 @@ const useStyles = makeStyles((theme) => ({
   }  
 }));
 
-const handleDrawerToggle = () => {
-  // const genres = ['Action', 'Drama', 'Horror', 'Western', 'Romance', 'Science fiction']
- 
-}
+// const handleDrawerToggle = () => {
+//   const genres = ['Action', 'Drama', 'Horror', 'Western', 'Romance', 'Science fiction'] 
+// }
+
+// const handleMenuClick = (e) => {
+//   console.log("MenuIcon is clicked!");
+// }
 
 const Navbar = ({ movies, setMovies }) => {
+  const genreList = [
+    {title: "Action"},
+    {title: "Drama"},
+    {title: "Horror"}
+  ]
   const classes = useStyles();
+  const[anchorEl, setAnchorEl] = useState(null);
+
+  const handleClick = e => {
+    setAnchorEl(e.currentTarget)
+  }
+  const handleClose = (e) => {
+    setAnchorEl(null)
+    console.log('item clicked' + e.detail)
+  }
+
+  // const nativeOnChange = e => {
+  //   const detail = {
+  //     selectedIndex: e.target.selectedIndex
+  //   }
+  //   e.target.selectedIndex = 0
+  //   e.target.dispatchEvent(new CustomEvent('itemClick', { detail }))
+  // }
+  // const itemClick = e => {
+  //   console.log('item clicked' + e.detail)
+  // }
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -65,10 +94,24 @@ const Navbar = ({ movies, setMovies }) => {
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
-            onClick={handleDrawerToggle}
+            aria-controls="simple-menu"
+            onClick={handleClick}
           >
-          <MenuIcon />
+          <MenuIcon/>                  
           </IconButton>
+          <Menu
+            id="simple-menu"
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            {genreList.map(genre => (
+              <MenuItem onClick={handleClose} key={genre.title} value={genre.title}>
+                {genre.title}
+              </MenuItem>
+            ))}
+          </Menu>
           <Typography className={classes.title} variant="h6" noWrap>
             World of Movies
           </Typography>

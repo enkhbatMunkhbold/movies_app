@@ -16,7 +16,7 @@
       "genre": "Adventure, Comedy, Sci-Fi",
       "year": 1985,
       "rating": 8.6,
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 3,
@@ -61,7 +61,7 @@
       "year": "1965",
       "rating": "8.7/10",
       "id": 10,
-      "favorite": false
+      "favorite": true
     },
     {
       "name": "Alien",
@@ -88,7 +88,7 @@
       "year": "1994–2004",
       "rating": "8.8/10",
       "id": 13,
-      "favorite": false
+      "favorite": true
     },
     {
       "name": "Indiana Jones and the Raiders of the Lost Ark",
@@ -314,6 +314,51 @@
       "rating": "7.8/10",
       "favorite": false,
       "id": 40
+    },
+    {
+      "name": "Matrix",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BYzUzOTA5ZTMtMTdlZS00MmQ5LWFmNjEtMjE5MTczN2RjNjE3XkEyXkFqcGdeQXVyNTc2ODIyMzY@._V1_SX300.jpg",
+      "genre": "Action, Drama, Fantasy",
+      "year": "1993",
+      "rating": "7.7/10",
+      "favorite": false,
+      "id": 41
+    },
+    {
+      "name": "Titanic",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
+      "genre": "Drama, Romance",
+      "year": "1997",
+      "rating": "7.9/10",
+      "favorite": false,
+      "id": 42
+    },
+    {
+      "name": "The Mask",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BOWExYjI5MzktNTRhNi00Nzg2LThkZmQtYWVkYjRlYWI2MDQ4XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg",
+      "genre": "Action, Comedy, Crime",
+      "year": "1994",
+      "rating": "6.9/10",
+      "favorite": false,
+      "id": 43
+    },
+    {
+      "name": "Mr. & Mrs. Smith",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMTUxMzcxNzQzOF5BMl5BanBnXkFtZTcwMzQxNjUyMw@@._V1_SX300.jpg",
+      "genre": "Action, Comedy, Crime",
+      "year": "2005",
+      "rating": "6.5/10",
+      "favorite": false,
+      "id": 44
+    },
+    {
+      "name": "Frozen",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMTQ1MjQwMTE5OF5BMl5BanBnXkFtZTgwNjk3MTcyMDE@._V1_SX300.jpg",
+      "genre": "Animation, Adventure, Comedy",
+      "year": "2013",
+      "rating": "7.4/10",
+      "favorite": true,
+      "id": 45
     }
   ]
 }
