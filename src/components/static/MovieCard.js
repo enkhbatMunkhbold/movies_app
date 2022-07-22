@@ -7,6 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import Button from '@mui/material/Button';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -19,7 +20,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const MovieCard = ({ movie, handleUpdate }) => {
-  const {id, name, img_link, genre, year, rating, favorite} = movie
+  const {id, name, img_link, genre, favorite} = movie
 
   const classes = useStyles();
  
@@ -50,15 +51,9 @@ const MovieCard = ({ movie, handleUpdate }) => {
         <Typography gutterBottom variant="h5" component="div">
           { name }
         </Typography>
-        <Typography gutterBottom variant="p" component="div">
+        <Typography gutterBottom variant="6" component="div">
           Genre: { genre }
         </Typography>
-        <Typography gutterBottom variant="p" component="div">
-          Year: { year }
-        </Typography>
-        <Typography gutterBottom variant="p" component="div">
-          Rating: { rating }
-        </Typography>   
       </CardContent>
       <CardActions>
         <IconButton 
@@ -66,7 +61,8 @@ const MovieCard = ({ movie, handleUpdate }) => {
           color={favorite ? 'secondary' : 'inherit'} 
           onClick={handleClick}>
           <FavoriteIcon/>
-        </IconButton>         
+        </IconButton> 
+        <Button size="small">Learn More</Button>        
       </CardActions>
     </Card>
   );

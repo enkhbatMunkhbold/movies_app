@@ -277,7 +277,7 @@
       "year": "2010",
       "rating": "6.0/10",
       "id": 36,
-      "favorite": false
+      "favorite": true
     },
     {
       "name": "Aladdin",
@@ -286,7 +286,7 @@
       "year": "1992",
       "rating": "8.0/10",
       "id": 37,
-      "favorite": false
+      "favorite": true
     },
     {
       "name": "Toy Story",
@@ -402,8 +402,26 @@
       "genre": "Action, Mystery, Thriller",
       "year": "2011",
       "rating": "6.8/10",
-      "favorite": true,
+      "favorite": false,
       "id": 50
+    },
+    {
+      "name": "Schindler's List",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+      "genre": "Biography, Drama, History",
+      "year": "1993",
+      "rating": "9.0/10",
+      "favorite": false,
+      "id": 51
+    },
+    {
+      "name": "Pianist",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BZmY3Y2MwZWYtMTY0Mi00YjcyLWEwNmUtYWMyY2M1MDRmOTQxXkEyXkFqcGdeQXVyMjkxNzQ1NDI@._V1_SX300.jpg",
+      "genre": "Musical, Romance",
+      "year": "2014",
+      "rating": "4.0/10",
+      "favorite": false,
+      "id": 52
     }
   ]
 }

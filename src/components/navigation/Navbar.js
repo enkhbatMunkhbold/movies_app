@@ -58,19 +58,8 @@ const useStyles = makeStyles((theme) => ({
 // }
 
 const Navbar = ({ movies, setMovies, setFilteredMovies, setSearchGenre }) => {
-  const genreList = [
-    {title: "All"},
-    {title: "Action"},
-    {title: "Drama"},
-    {title: "Horror"},
-    {title: "Comedy"},
-    {title: "Romance"},
-    {title: "Mystery"},
-    {title: "Adventure"},
-    {title: "Sci-Fi"},
-    {title: "Documentary"},
-    {title: "TV"},
-  ]
+  const genreList = ["All", "Action", "Drama", "Horror", "Comedy", "Romance", "Mystery", "Adventure", "Animation", "Sci-Fi", "Documentary", "Thriller"]
+    
   const classes = useStyles();
   const[anchorEl, setAnchorEl] = useState(null); 
 
@@ -131,9 +120,9 @@ const Navbar = ({ movies, setMovies, setFilteredMovies, setSearchGenre }) => {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            {genreList.map(genre => (
-              <MenuItem onClick={handleClose} key={genre.title} value={genre.title}>
-                {genre.title}
+            {genreList.map((genre, index) => (
+              <MenuItem onClick={handleClose} key={index} value={genre}>
+                {genre}
               </MenuItem>
             ))}
           </Menu>
