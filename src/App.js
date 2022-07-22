@@ -20,9 +20,6 @@ const App = () => {
     .then(res => res.json())
     .then(list => setMovies(list))
   }, [])  
-
-  console.log('Movies length:', movies.length)
-  console.log('Filtered movies:', filteredMovies.length)
   
   let movieList = (searchGenre === '' || searchGenre === 'All') ? [...movies] : filteredMovies
 
@@ -37,7 +34,7 @@ const App = () => {
         <Route path="/" 
           element={
             <Home 
-               movies={movies}
+               setFilteredMovies={setFilteredMovies}
               setMovies={setMovies} 
               movieList={ movieList }
             />

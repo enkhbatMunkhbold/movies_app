@@ -16,7 +16,7 @@
       "genre": "Adventure, Comedy, Sci-Fi",
       "year": 1985,
       "rating": 8.6,
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 3,
@@ -214,7 +214,7 @@
       "year": "2004",
       "rating": "5.9/10",
       "id": 29,
-      "favorite": false
+      "favorite": true
     },
     {
       "name": "Finding Nemo",
@@ -339,7 +339,7 @@
       "genre": "Action, Comedy, Crime",
       "year": "1994",
       "rating": "6.9/10",
-      "favorite": false,
+      "favorite": true,
       "id": 43
     },
     {

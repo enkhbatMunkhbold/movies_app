@@ -13,11 +13,12 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const MovieList = ({ movies, setMovies, movieList }) => {  
+const MovieList = ({ setFilteredMovies, setMovies, movieList }) => {  
 
   const handleUpdate = (movieObject) => {
-    const list = movies.map(m => m.id === movieObject.id ? movieObject : m)
+    const list = movieList.map(m => m.id === movieObject.id ? movieObject : m)
     setMovies(list)
+    setFilteredMovies(list)
   }
 
   // console.log("filteredMovies:", filteredMovies)  
