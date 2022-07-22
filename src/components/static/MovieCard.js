@@ -24,9 +24,6 @@ const MovieCard = ({ movie, handleUpdate }) => {
   const classes = useStyles();
  
   const handleClick = () => {
-
-    // console.log('MOVIE:', movie)
-    // setFavorite(favorite => !favorite)
     fetch(`http://localhost:3001/movies/${id}`, {
       method: "PATCH",
       headers: {
@@ -64,7 +61,10 @@ const MovieCard = ({ movie, handleUpdate }) => {
         </Typography>   
       </CardContent>
       <CardActions>
-        <IconButton aria-label="add to favorites" color={favorite ? 'secondary' : 'inherit'} onClick={handleClick}>
+        <IconButton 
+          aria-label="add to favorites"  
+          color={favorite ? 'secondary' : 'inherit'} 
+          onClick={handleClick}>
           <FavoriteIcon/>
         </IconButton>         
       </CardActions>

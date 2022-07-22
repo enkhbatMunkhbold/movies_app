@@ -57,21 +57,46 @@ const useStyles = makeStyles((theme) => ({
 //   console.log("MenuIcon is clicked!");
 // }
 
-const Navbar = ({ movies, setMovies }) => {
+const Navbar = ({ movies, setMovies, setFilteredMovies, setSearchGenre }) => {
   const genreList = [
+    {title: "All"},
     {title: "Action"},
     {title: "Drama"},
-    {title: "Horror"}
+    {title: "Horror"},
+    {title: "Comedy"},
+    {title: "Romance"},
+    {title: "Mystery"},
+    {title: "Adventure"},
+    {title: "Sci-Fi"},
+    {title: "Documentary"},
+    {title: "TV"},
   ]
   const classes = useStyles();
-  const[anchorEl, setAnchorEl] = useState(null);
+  const[anchorEl, setAnchorEl] = useState(null); 
+
+  const isIncludes = (m, g) => {
+    const arr = m.genre.split(',').map(el => el.trim())
+    if(!arr.includes(g)){
+      return false 
+    } else {
+      return true
+    }
+  }
+
+  const handleFilter = (movieGenre) => {    
+    const filtered = movies.filter(movie =>{
+      return (isIncludes(movie, movieGenre))
+    })
+    setFilteredMovies(filtered)
+  }
 
   const handleClick = e => {
     setAnchorEl(e.currentTarget)
   }
   const handleClose = (e) => {
     setAnchorEl(null)
-    console.log('item clicked' + e.detail)
+    handleFilter(e.currentTarget.innerText)
+    setSearchGenre(e.currentTarget.innerText)
   }
 
   // const nativeOnChange = e => {

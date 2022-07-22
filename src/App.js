@@ -6,26 +6,43 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
   const [movies, setMovies] = useState([])  
-
+  const[filteredMovies, setFilteredMovies] = useState([])
+  const[searchGenre, setSearchGenre] = useState('')
+  
   // console.log(process.env.MY_API_KEY)
 
   // const { MY_API_KEY } = process.env
   // console.log('MY_API_KEY:', MY_API_KEY); 
+  // console.log(movies)
  
   useEffect(() => {
     fetch('http://localhost:3001/movies')
     .then(res => res.json())
     .then(list => setMovies(list))
-  }, [])   
+  }, [])  
+
+  console.log('Movies length:', movies.length)
+  console.log('Filtered movies:', filteredMovies.length)
+  
+  let movieList = (searchGenre === '' || searchGenre === 'All') ? [...movies] : filteredMovies
 
   return (
     <Router>
       <Navbar 
         movies={movies} 
-        setMovies={setMovies} 
+        setFilteredMovies={setFilteredMovies}
+        setSearchGenre={setSearchGenre}
       />
       <Routes>
-        <Route path="/" element={<Home movies={ movies } setMovies={setMovies} />} />
+        <Route path="/" 
+          element={
+            <Home 
+               movies={movies}
+              setMovies={setMovies} 
+              movieList={ movieList }
+            />
+          } 
+        />
         <Route path="/movies/new" element={<NewMovie />} />
       </Routes>      
     </Router>
