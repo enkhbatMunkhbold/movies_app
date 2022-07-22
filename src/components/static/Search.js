@@ -56,7 +56,7 @@ const Search = ({ movies, setMovies }) => {
       name: m.Title,
       img_link: m.Poster,
       genre: m.Genre,
-      year: m.Year,
+      year: Number(m.Year),
       rating: m.Ratings[0].Value,
       favorite: false
     }

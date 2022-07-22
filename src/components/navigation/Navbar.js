@@ -58,10 +58,10 @@ const useStyles = makeStyles((theme) => ({
 // }
 
 const Navbar = ({ movies, setMovies, setFilteredMovies, setSearchGenre }) => {
-  const genreList = ["All", "Action", "Drama", "Horror", "Comedy", "Romance", "Mystery", "Adventure", "Animation", "Sci-Fi", "Documentary", "Thriller"]
+  const genreList = ["All", "Action", "Drama", "Horror", "Comedy", "Romance", "Mystery", "Adventure", "Animation", "Sci-Fi", "Documentary", "Thriller", "Crime"]
     
   const classes = useStyles();
-  const[anchorEl, setAnchorEl] = useState(null); 
+  const[anchorEl, setAnchorEl] = useState(null);
 
   const isIncludes = (m, g) => {
     const arr = m.genre.split(',').map(el => el.trim())
