@@ -72,11 +72,15 @@ const Navbar = ({ movies, setMovies, setFilteredMovies, setSearchGenre }) => {
     }
   }
 
-  const handleFilter = (movieGenre) => {    
-    const filtered = movies.filter(movie =>{
-      return (isIncludes(movie, movieGenre))
-    })
-    setFilteredMovies(filtered)
+  const handleFilter = (movieGenre) => {  
+    if(movieGenre === "All") {
+      setFilteredMovies(movies)
+    } else {
+      const filtered = movies.filter(movie =>{
+        return (isIncludes(movie, movieGenre))
+      })
+      setFilteredMovies(filtered)
+    }     
   }
 
   const handleClick = e => {

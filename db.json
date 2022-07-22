@@ -422,6 +422,24 @@
       "rating": "4.0/10",
       "favorite": false,
       "id": 52
+    },
+    {
+      "name": "9/11: The Falling Man",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMTg1NTM1Mzk2OV5BMl5BanBnXkFtZTgwMTQ1ODY1ODE@._V1_SX300.jpg",
+      "genre": "Documentary",
+      "year": "2006",
+      "rating": "7.3/10",
+      "favorite": false,
+      "id": 53
+    },
+    {
+      "name": "Shoah",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMTYyMTI3NzYxMl5BMl5BanBnXkFtZTcwMzM5ODQxNA@@._V1_SX300.jpg",
+      "genre": "Documentary, History, War",
+      "year": "1985",
+      "rating": "8.7/10",
+      "favorite": false,
+      "id": 54
     }
   ]
 }
