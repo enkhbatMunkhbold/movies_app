@@ -11,6 +11,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    // backgroundColor: "#ABC9FF"
   },
   formControl: {
     margin: theme.spacing(3),
@@ -41,12 +42,12 @@ const NewMovie = () => {
   const { action, drama, horror, comedy, romance, mystery, adventure, animation, sciFi, documentary, thriller, crime } = state;
   // const error = [action, drama, horror, comedy, romance, mystery, adventure, animation, sciFi, documentary, thriller].filter((v) => v).length !== 2;
 
-  const paperStyle={padding: '30px 20px', width: 700, margin: "80px auto", outlineColor: "#ABC9FF"}
+  const paperStyle={padding: '80px 20px', width: 700, margin: "80px auto", height: 700, backgroundColor: "#DFF6FF"}
   const headerStyle={margin:10}
   const avatarStyle={backgroundColor: 'blue'}
 
   return (
-    <div style={{backgroundColor: "#ABC9FF"}}>
+    <div>
     <Grid align="center">
       <Paper elevation={20} style={paperStyle}>
         <Grid>
@@ -131,14 +132,16 @@ const NewMovie = () => {
               </FormGroup>
             </FormControl>
           </div>        
-          <FormControl component="fieldset" style={{mt: 10, mb: 30}}>
-            <FormLabel component="legend">Favorite</FormLabel>
+          <FormControl component="fieldset" style={{mt: 10, mb: 30}}>            
             <RadioGroup aria-label="gender" name="gender1" style={{display: 'initial'}}>
+              <FormLabel component="legend">Favorite</FormLabel>
               <FormControlLabel value="female" control={<Radio />} label="Yes" />
               <FormControlLabel value="male" control={<Radio />} label="No" />
             </RadioGroup>
-          </FormControl>          
-          <Button type="submit" variant="contained" color="primary">Create Movie</Button>
+          </FormControl> 
+          <div style={{marginTop: 50}}>
+            <Button type="submit" variant="contained" color="primary">Create Movie</Button>
+          </div>             
         </form>
       </Paper>
     </Grid>
