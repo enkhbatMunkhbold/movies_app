@@ -142,7 +142,7 @@
       "year": "2005",
       "rating": "6.7/10",
       "id": 21,
-      "favorite": false
+      "favorite": true
     },
     {
       "name": "Girl, Interrupted",
@@ -214,7 +214,7 @@
       "year": "2004",
       "rating": "5.9/10",
       "id": 29,
-      "favorite": true
+      "favorite": false
     },
     {
       "name": "Finding Nemo",
@@ -359,6 +359,51 @@
       "rating": "7.4/10",
       "favorite": true,
       "id": 45
+    },
+    {
+      "name": "Modern Family",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BNzRhNWIxYTEtYjc2NS00YWFlLWFhOGEtMDZiMWM1M2RkNDkyXkEyXkFqcGdeQXVyNjc0MjkzNjc@._V1_SX300.jpg",
+      "genre": "Comedy, Drama, Romance",
+      "year": "2009–2020",
+      "rating": "8.5/10",
+      "favorite": false,
+      "id": 46
+    },
+    {
+      "name": "Seinfeld",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BZjZjMzQ2ZmUtZWEyZC00NWJiLWFjM2UtMzhmYzZmZDcxMzllXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
+      "genre": "Comedy",
+      "year": "1989–1998",
+      "rating": "8.9/10",
+      "favorite": true,
+      "id": 47
+    },
+    {
+      "name": "Rush Hour",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BYWM2NDZmYmYtNzlmZC00M2MyLWJmOGUtMjhiYmQ2OGU1YTE1L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "genre": "Action, Comedy, Crime",
+      "year": "1998",
+      "rating": "7.0/10",
+      "favorite": false,
+      "id": 48
+    },
+    {
+      "name": "Speed",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BYjc0MjYyN2EtZGRhMy00NzJiLWI2Y2QtYzhiYTU3NzAxNzg4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "genre": "Action, Adventure, Thriller",
+      "year": "1994",
+      "rating": "7.3/10",
+      "favorite": false,
+      "id": 49
+    },
+    {
+      "name": "Unknown",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BODA4NTk3MTQwN15BMl5BanBnXkFtZTcwNjUwMTMxNA@@._V1_SX300.jpg",
+      "genre": "Action, Mystery, Thriller",
+      "year": "2011",
+      "rating": "6.8/10",
+      "favorite": true,
+      "id": 50
     }
   ]
 }

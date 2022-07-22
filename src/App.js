@@ -27,6 +27,7 @@ const App = () => {
     <Router>
       <Navbar 
         movies={movies} 
+        setMovies={setMovies}
         setFilteredMovies={setFilteredMovies}
         setSearchGenre={setSearchGenre}
       />
@@ -34,7 +35,7 @@ const App = () => {
         <Route path="/" 
           element={
             <Home 
-               setFilteredMovies={setFilteredMovies}
+              setFilteredMovies={setFilteredMovies}
               setMovies={setMovies} 
               movieList={ movieList }
             />

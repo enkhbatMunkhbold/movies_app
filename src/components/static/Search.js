@@ -71,18 +71,18 @@ const Search = ({ movies, setMovies }) => {
       },
       body: JSON.stringify(movieData)
     }).then( res => res.json())
-      .then(data => setMovies([...movies, data]))
+      .then(foundMovie => setMovies([...movies, foundMovie]))
   }  
 
   const handleSubmit = (e) => {
     e.preventDefault()
-   
-    fetch(`http://www.omdbapi.com/?t=${searchMovie}&apikey=19546fcd`)
-    .then(res => res.json())
-    .then(movieData => {
-      handleAddMovie(movieData)
-    })  
+    if(!movies.includes(searchMovie)){
+      fetch(`http://www.omdbapi.com/?t=${searchMovie}&apikey=19546fcd`)
+      .then(res => res.json())
+      .then(movieData => handleAddMovie(movieData))
+    }    
     e.target.reset()  
+    console.log("Movies:", movies)
   }
 
   const handleClick = (e) => {
