@@ -7,7 +7,7 @@
       "genre": "Historical Fiction and Adventure",
       "year": 1992,
       "rating": 7.7,
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 2,
@@ -43,7 +43,7 @@
       "genre": "Action, Adventure, Sci-Fi",
       "year": 1984,
       "rating": 8.1,
-      "favorite": false
+      "favorite": true
     },
     {
       "name": "Dictator",
@@ -52,7 +52,7 @@
       "year": "2016",
       "rating": "4.2/10",
       "id": 9,
-      "favorite": true
+      "favorite": false
     },
     {
       "name": "Tom and Jerry",
@@ -61,7 +61,7 @@
       "year": "1965",
       "rating": "8.7/10",
       "id": 10,
-      "favorite": true
+      "favorite": false
     },
     {
       "name": "Alien",
@@ -115,7 +115,7 @@
       "year": "1982",
       "rating": "6.8/10",
       "id": 16,
-      "favorite": false
+      "favorite": true
     },
     {
       "name": "Annie Hall",
@@ -160,7 +160,7 @@
       "year": "2009",
       "rating": "7.8/10",
       "id": 23,
-      "favorite": false
+      "favorite": true
     },
     {
       "name": "The Notebook",
@@ -187,7 +187,7 @@
       "year": "1998",
       "rating": "6.9/10",
       "id": 26,
-      "favorite": false
+      "favorite": true
     },
     {
       "name": "Lost and Delirious",
@@ -294,7 +294,7 @@
       "genre": "Animation, Adventure, Comedy",
       "year": "1995",
       "rating": "8.3/10",
-      "favorite": false,
+      "favorite": true,
       "id": 38
     },
     {
@@ -303,7 +303,7 @@
       "genre": "Action, Adventure, Comedy",
       "year": "1975",
       "rating": "6.4/10",
-      "favorite": false,
+      "favorite": true,
       "id": 39
     },
     {
@@ -348,7 +348,7 @@
       "genre": "Action, Comedy, Crime",
       "year": "2005",
       "rating": "6.5/10",
-      "favorite": false,
+      "favorite": true,
       "id": 44
     },
     {
@@ -393,7 +393,7 @@
       "genre": "Action, Adventure, Thriller",
       "year": "1994",
       "rating": "7.3/10",
-      "favorite": false,
+      "favorite": true,
       "id": 49
     },
     {
@@ -411,7 +411,7 @@
       "genre": "Biography, Drama, History",
       "year": "1993",
       "rating": "9.0/10",
-      "favorite": false,
+      "favorite": true,
       "id": 51
     },
     {
@@ -429,7 +429,7 @@
       "genre": "Documentary",
       "year": "2006",
       "rating": "7.3/10",
-      "favorite": false,
+      "favorite": true,
       "id": 53
     },
     {
@@ -440,6 +440,42 @@
       "rating": "8.7/10",
       "favorite": false,
       "id": 54
+    },
+    {
+      "name": "Police Academy",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMjNiMWVhNjAtMzgyYS00NzRhLWJmNGUtNzdiOGFhMmY5NDUwL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "genre": "Comedy",
+      "year": 1984,
+      "rating": "6.7/10",
+      "favorite": true,
+      "id": 55
+    },
+    {
+      "name": "Robin Hood",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMTM5NzcwMzEwOF5BMl5BanBnXkFtZTcwNjg5MTgwMw@@._V1_SX300.jpg",
+      "genre": "Action, Adventure, Drama",
+      "year": 2010,
+      "rating": "6.6/10",
+      "favorite": true,
+      "id": 56
+    },
+    {
+      "name": "Gladiator",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+      "genre": "Action, Adventure, Drama",
+      "year": 2000,
+      "rating": "8.5/10",
+      "favorite": true,
+      "id": 57
+    },
+    {
+      "name": "Mission: Impossible III",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BOThhNTA1YjItYzk2Ny00M2Y1LWJlYWUtZDQyZDU0YmY5Y2M5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+      "genre": "Action, Adventure, Thriller",
+      "year": 2006,
+      "rating": "6.9/10",
+      "favorite": true,
+      "id": 58
     }
   ]
 }

@@ -49,14 +49,6 @@ const useStyles = makeStyles((theme) => ({
   }  
 }));
 
-// const handleDrawerToggle = () => {
-//   const genres = ['Action', 'Drama', 'Horror', 'Western', 'Romance', 'Science fiction'] 
-// }
-
-// const handleMenuClick = (e) => {
-//   console.log("MenuIcon is clicked!");
-// }
-
 const Navbar = ({ movies, setMovies, setFilteredMovies, setSearchGenre }) => {
   const genreList = ["All", "Action", "Drama", "Horror", "Comedy", "Romance", "Mystery", "Adventure", "Animation", "Sci-Fi", "Documentary", "Thriller", "Crime"]
     
@@ -91,17 +83,6 @@ const Navbar = ({ movies, setMovies, setFilteredMovies, setSearchGenre }) => {
     handleFilter(e.currentTarget.innerText)
     setSearchGenre(e.currentTarget.innerText)
   }
-
-  // const nativeOnChange = e => {
-  //   const detail = {
-  //     selectedIndex: e.target.selectedIndex
-  //   }
-  //   e.target.selectedIndex = 0
-  //   e.target.dispatchEvent(new CustomEvent('itemClick', { detail }))
-  // }
-  // const itemClick = e => {
-  //   console.log('item clicked' + e.detail)
-  // }
 
   return (
     <div className={classes.root}>

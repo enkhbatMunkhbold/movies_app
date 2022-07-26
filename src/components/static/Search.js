@@ -47,11 +47,9 @@ const useStyles = makeStyles((theme) => ({
 
 const Search = ({ movies, setMovies }) => {
   const classes = useStyles()
-
   const [searchMovie, setSearchMovie] = useState(null)
 
   const handleAddMovie = (m) => {
-    // console.log("Handle movie:", m);
     const movieData = {
       name: m.Title,
       img_link: m.Poster,
@@ -60,9 +58,6 @@ const Search = ({ movies, setMovies }) => {
       rating: m.Ratings[0].Value,
       favorite: false
     }
-
-    // console.log("MovieData:", movieData);
-    // console.log('Movies:', movies);
 
     fetch(`http://localhost:3001/movies`, {
       method: 'POST',
