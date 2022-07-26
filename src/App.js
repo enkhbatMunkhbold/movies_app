@@ -36,12 +36,21 @@ const App = () => {
           element={
             <Home 
               setFilteredMovies={setFilteredMovies}
+              movies={movies}
               setMovies={setMovies} 
               movieList={ movieList }
             />
           } 
         />
-        <Route path="/movies/new" element={<NewMovie />} />
+        <Route 
+          path="/movies/new" 
+          element={
+            <NewMovie  
+              movies={movies} 
+              setMovies={setMovies}
+            />
+          } 
+        />
       </Routes>      
     </Router>
   );

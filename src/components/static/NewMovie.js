@@ -6,6 +6,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { makeStyles } from '@material-ui/core/styles';
+// import { MovieSharp } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const NewMovie = () => {
+const NewMovie = ({ movies, setMovies }) => {
   const classes = useStyles();
   const [formData, setFormData] = useState({
     name: '',
@@ -30,39 +31,34 @@ const NewMovie = () => {
 
   const [radioValue, setRadioValue] = useState('no-favorite')
   const [state, setState] = React.useState({
-    action: false,
-    drama: false,
-    horror: false,
-    comedy: false,
-    romance: false,
-    mystery: false,
-    adventure: false,
-    animation: false,
-    scifi: false,
-    documentary: false,
-    thriller: false,
-    crime: false
+    Action: false,
+    Drama: false,
+    Horror: false,
+    Comedy: false,
+    Romance: false,
+    Mystery: false,
+    Adventure: false,
+    Animation: false,
+    Scifi: false,
+    Documentary: false,
+    Thriller: false,
+    Crime: false
   });  
   
-  const { action, drama, horror, comedy, romance, mystery, adventure, animation, scifi, documentary, thriller, crime } = state;
-  // const { name, img_link, year, rating } = formData
+  const { Action, Drama, Horror, Comedy, Romance, Mystery, Adventure, Animation, Scifi, Documentary, Thriller, Crime } = state;
   const paperStyle={padding: '50px 20px 80px', width: 700, margin: "80px auto", height: 700, backgroundColor: "#FEFBE7"}
   const headerStyle={margin:20}
   const avatarStyle={backgroundColor: 'blue'}     
 
   const handleCheck = e => {
-    // console.log(e.target.name);
     setState({ ...state, [e.target.name]: e.target.checked })
   }
 
   const handleRadioButton = e => {
-    // console.log(e.target.value);
     setRadioValue(e.target.value)
   }
 
   const handleChange = e => {
-    console.log("Target name:", e.target.name)
-    console.log("Target value:", e.target.value)
     setFormData({...formData, [e.target.name]: e.target.value})
   }
 
@@ -75,11 +71,19 @@ const NewMovie = () => {
       name: formData.name,
       img_link: formData.img_link,
       genre: movieGenreList,
-      year: formData.year,
+      year: Number(formData.year),
       rating: formData.rating,
       favorite: radioValue
     }
-    console.log("Created Movie:", createdMovie)
+    fetch('http://localhost:3001/movies', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(createdMovie)
+    }).then(res => res.json())
+      .then(postedMovie => setMovies([...movies, postedMovie]))
+      e.target.reset()
   }
 
   return (
@@ -96,24 +100,24 @@ const NewMovie = () => {
           Please fill this form to insert your favorite movie into Database!
         </Typography>
         <form onSubmit={handleSubmit}>
-          <TextField fullWidth label="Movie Title" placeholder='Enter Movie Title' onChange={handleChange}/>
-          <TextField fullWidth label="Image Link" placeholder='Enter Link Address' onChange={handleChange}/>
-          <TextField fullWidth label="Year" placeholder='Enter Year' onChange={handleChange}/>
-          <TextField fullWidth label="Rating" placeholder='Enter Rating' onChange={handleChange}/>  
+          <TextField fullWidth label="Movie Title" placeholder='Enter Movie Title' onChange={handleChange} name='name'/>
+          <TextField fullWidth label="Image Link" placeholder='Enter Link Address' onChange={handleChange} name='img_link'/>
+          <TextField fullWidth label="Year" placeholder='Enter Year' onChange={handleChange} name='year'/>
+          <TextField fullWidth label="Rating" placeholder='Enter Rating' onChange={handleChange} name='rating'/>  
           <h3 style={{marginBottom: 0}}>Genre</h3>
           <div className={classes.root}>          
             <FormControl component="fieldset" className={classes.formControl}>
               <FormGroup>
                 <FormControlLabel
-                  control={<Checkbox checked={action} onChange={handleCheck} name="action" />}
+                  control={<Checkbox checked={Action} onChange={handleCheck} name="Action" />}
                   label="Action"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={drama} onChange={handleCheck} name="drama" />}
+                  control={<Checkbox checked={Drama} onChange={handleCheck} name="Drama" />}
                   label="Drama"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={horror} onChange={handleCheck} name="horror" />}
+                  control={<Checkbox checked={Horror} onChange={handleCheck} name="Horror" />}
                   label="Horror"
                 />
               </FormGroup>
@@ -121,15 +125,15 @@ const NewMovie = () => {
             <FormControl component="fieldset" className={classes.formControl}>      
               <FormGroup>
                 <FormControlLabel
-                  control={<Checkbox checked={comedy} onChange={handleCheck} name="comedy" />}
+                  control={<Checkbox checked={Comedy} onChange={handleCheck} name="Comedy" />}
                   label="Comedy"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={romance} onChange={handleCheck} name="romance" />}
+                  control={<Checkbox checked={Romance} onChange={handleCheck} name="Romance" />}
                   label="Romance"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={mystery} onChange={handleCheck} name="mystery" />}
+                  control={<Checkbox checked={Mystery} onChange={handleCheck} name="Mystery" />}
                   label="Mystery"
                 />
               </FormGroup>
@@ -138,15 +142,15 @@ const NewMovie = () => {
             <FormControl component="fieldset" className={classes.formControl}>
               <FormGroup>
                 <FormControlLabel
-                  control={<Checkbox checked={adventure} onChange={handleCheck} name="adventure" />}
+                  control={<Checkbox checked={Adventure} onChange={handleCheck} name="Adventure" />}
                   label="Adventure"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={animation} onChange={handleCheck} name="animation" />}
+                  control={<Checkbox checked={Animation} onChange={handleCheck} name="Animation" />}
                   label="Animation"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={scifi} onChange={handleCheck} name="scifi" />}
+                  control={<Checkbox checked={Scifi} onChange={handleCheck} name="Scifi" />}
                   label="Sci-Fi"
                 />
               </FormGroup>
@@ -154,15 +158,15 @@ const NewMovie = () => {
             <FormControl component="fieldset" className={classes.formControl}>
               <FormGroup>
                 <FormControlLabel
-                  control={<Checkbox checked={documentary} onChange={handleCheck} name="documentary" />}
+                  control={<Checkbox checked={Documentary} onChange={handleCheck} name="Documentary" />}
                   label="Documentary"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={thriller} onChange={handleCheck} name="thriller" />}
+                  control={<Checkbox checked={Thriller} onChange={handleCheck} name="Thriller" />}
                   label="Thriller"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={crime} onChange={handleCheck} name="crime" />}
+                  control={<Checkbox checked={Crime} onChange={handleCheck} name="Crime" />}
                   label="Crime"
                 />
               </FormGroup>

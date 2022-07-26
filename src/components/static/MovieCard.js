@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import Button from '@mui/material/Button';
+import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -16,10 +17,13 @@ const useStyles = makeStyles(() => ({
   media: {
     height: 0,
     paddingTop: '56.25%', 
+  },
+  deleteBtn: {
+    marginLeft: 60
   }
 }));
 
-const MovieCard = ({ movie, handleUpdate }) => {
+const MovieCard = ({ movie, handleUpdate, handleRemoveMovie }) => {
   const {id, name, img_link, genre, favorite} = movie
 
   const classes = useStyles();
@@ -34,9 +38,16 @@ const MovieCard = ({ movie, handleUpdate }) => {
         favorite: !favorite 
       })
     }).then(res => res.json())
-      .then(movieData => {
-        handleUpdate(movieData)
-      })
+      .then(movieData => handleUpdate(movieData))
+      handleRemoveMovie(id)
+  }
+
+  const handleDelete = () => {
+    fetch(`http://localhost:3001/movies/${id}`, {
+      method: 'DELETE'
+    }).then(res => res.json())
+      .then(data => console.log("Movie is successfully deleted!", data)) 
+      handleRemoveMovie(id)   
   }
 
   return (
@@ -62,7 +73,14 @@ const MovieCard = ({ movie, handleUpdate }) => {
           onClick={handleClick}>
           <FavoriteIcon/>
         </IconButton> 
-        <Button size="small">Learn More</Button>        
+        <Button size="small">Learn More</Button>     
+        <IconButton
+          aria-label='delete'
+          onClick={handleDelete}
+          style={{marginLeft: 'auto'}}
+        >    
+          <DeleteRoundedIcon/>
+        </IconButton>
       </CardActions>
     </Card>
   );
