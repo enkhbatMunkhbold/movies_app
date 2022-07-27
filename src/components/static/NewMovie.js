@@ -29,7 +29,8 @@ const NewMovie = ({ movies, setMovies }) => {
     favorite: ''
   })
 
-  let [radioValue, setRadioValue] = useState('non-favorite')
+  let [radioValue, setRadioValue] = useState(false)
+  let [buttonValue, setButtonValue] = useState('non-favorite')
   const [state, setState] = React.useState({
     Action: false,
     Drama: false,
@@ -48,14 +49,19 @@ const NewMovie = ({ movies, setMovies }) => {
   const { Action, Drama, Horror, Comedy, Romance, Mystery, Adventure, Animation, Scifi, Documentary, Thriller, Crime } = state;
   const paperStyle={padding: '50px 20px 80px', width: 700, margin: "80px auto", height: 700, backgroundColor: "#FEFBE7"}
   const headerStyle={margin:20}
-  const avatarStyle={backgroundColor: 'blue'}     
-
+  const avatarStyle={backgroundColor: 'blue'}  
+  
   const handleCheck = e => {
     setState({ ...state, [e.target.name]: e.target.checked })
   }
 
   const handleRadioButton = e => {
-    setRadioValue(e.target.value)
+    setButtonValue(e.target.value)
+    if(buttonValue === 'favorite') {
+      setRadioValue(true)
+    } else {
+      setRadioValue(false)
+    }    
   }
 
   const handleChange = e => {
@@ -87,8 +93,10 @@ const NewMovie = ({ movies, setMovies }) => {
     }).then(res => res.json())
       .then(postedMovie => setMovies([...movies, postedMovie]))
       e.target.reset()
-      if(radioValue === 'favorite') {
-        setRadioValue('non-favorite')
+      if(radioValue) {
+        setRadioValue(false)
+      } else {
+        return radioValue
       }
 
       Object.entries(state).map(item => item[1] === true ? setState(false) : item)

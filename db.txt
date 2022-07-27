@@ -6,7 +6,7 @@
       "genre": "Crime, Drama",
       "year": 1972,
       "rating": "9.2/10",
-      "favorite": true,
+      "favorite": false,
       "id": 1
     },
     {
@@ -24,7 +24,7 @@
       "genre": "Drama, Romance, War",
       "year": 1939,
       "rating": "8.2/10",
-      "favorite": true,
+      "favorite": false,
       "id": 3
     },
     {
@@ -60,7 +60,7 @@
       "genre": "Action, Comedy, Crime",
       "year": 1994,
       "rating": "6.9/10",
-      "favorite": true,
+      "favorite": false,
       "id": 7
     },
     {
@@ -87,7 +87,7 @@
       "genre": "Drama, Romance",
       "year": 2004,
       "rating": "7.8/10",
-      "favorite": true,
+      "favorite": false,
       "id": 10
     },
     {
@@ -105,7 +105,7 @@
       "genre": "Biography, Drama, Romance",
       "year": 1998,
       "rating": "6.9/10",
-      "favorite": true,
+      "favorite": false,
       "id": 12
     },
     {
@@ -132,7 +132,7 @@
       "genre": "Drama, Romance",
       "year": 1997,
       "rating": "7.9/10",
-      "favorite": true,
+      "favorite": false,
       "id": 15
     },
     {
@@ -141,7 +141,7 @@
       "genre": "Animation, Adventure, Comedy",
       "year": 2003,
       "rating": "8.2/10",
-      "favorite": true,
+      "favorite": false,
       "id": 16
     },
     {
@@ -159,7 +159,7 @@
       "genre": "Action, Crime, Sci-Fi",
       "year": 1997,
       "rating": "7.3/10",
-      "favorite": true,
+      "favorite": false,
       "id": 18
     },
     {
@@ -177,7 +177,7 @@
       "genre": "Animation, Adventure, Comedy",
       "year": 2013,
       "rating": "7.4/10",
-      "favorite": true,
+      "favorite": false,
       "id": 20
     },
     {
