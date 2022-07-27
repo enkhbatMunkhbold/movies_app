@@ -29,7 +29,7 @@ const NewMovie = ({ movies, setMovies }) => {
     favorite: ''
   })
 
-  const [radioValue, setRadioValue] = useState('non-favorite')
+  let [radioValue, setRadioValue] = useState('non-favorite')
   const [state, setState] = React.useState({
     Action: false,
     Drama: false,
@@ -65,8 +65,8 @@ const NewMovie = ({ movies, setMovies }) => {
   const handleSubmit = e => {
     e.preventDefault() 
     const movieGenreList = Object.entries(state).filter(item => item[1]).map(item => item[0]).join(', ')   
-    console.log("Movie Genre List:", movieGenreList)
-    console.log("formData:", formData)
+    // console.log("Movie Genre List:", movieGenreList)
+    // console.log("formData:", formData)
     const createdMovie = {
       name: formData.name,
       img_link: formData.img_link,
@@ -87,7 +87,11 @@ const NewMovie = ({ movies, setMovies }) => {
     }).then(res => res.json())
       .then(postedMovie => setMovies([...movies, postedMovie]))
       e.target.reset()
-      // setRadioValue("non-favorite")
+      if(radioValue === 'favorite') {
+        setRadioValue('non-favorite')
+      }
+
+      Object.entries(state).map(item => item[1] === true ? setState(false) : item)
   }
 
   return (
