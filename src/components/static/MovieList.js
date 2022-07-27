@@ -13,13 +13,13 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const MovieList = ({ setFilteredMovies, setMovies, movieList, handleRemoveMovie }) => {  
+const MovieList = ({ movieList, handleRemoveMovie }) => {  
 
-  const handleUpdate = (movieObject) => {
-    const list = movieList.map(m => m.id === movieObject.id ? movieObject : m)
-    setMovies(list)
-    setFilteredMovies(list)
-  }
+  // const handleUpdate = (movieObject) => {
+  //   const list = movieList.map(m => m.id === movieObject.id ? movieObject : m)
+  //   setMovies(list)
+  //   setFilteredMovies(list)
+  // }
 
   // console.log("filteredMovies:", filteredMovies)  
   // console.log("Movie List:", movieList)
@@ -30,8 +30,7 @@ const MovieList = ({ setFilteredMovies, setMovies, movieList, handleRemoveMovie 
           <Item>
             <MovieCard 
               key={m.id} 
-              movie={m} 
-              handleUpdate={handleUpdate}
+              movie={m}             
               handleRemoveMovie={handleRemoveMovie}
             />
           </Item>

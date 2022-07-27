@@ -29,7 +29,7 @@ const NewMovie = ({ movies, setMovies }) => {
     favorite: ''
   })
 
-  const [radioValue, setRadioValue] = useState('no-favorite')
+  const [radioValue, setRadioValue] = useState('non-favorite')
   const [state, setState] = React.useState({
     Action: false,
     Drama: false,
@@ -75,6 +75,9 @@ const NewMovie = ({ movies, setMovies }) => {
       rating: formData.rating,
       favorite: radioValue
     }
+
+    // const objectValues = Object.values(createdMovie)
+
     fetch('http://localhost:3001/movies', {
       method: 'POST',
       headers: {
@@ -84,6 +87,7 @@ const NewMovie = ({ movies, setMovies }) => {
     }).then(res => res.json())
       .then(postedMovie => setMovies([...movies, postedMovie]))
       e.target.reset()
+      setRadioValue(radioValue)
   }
 
   return (
@@ -175,8 +179,8 @@ const NewMovie = ({ movies, setMovies }) => {
           <FormControl component="fieldset" style={{mt: 10, mb: 30}}>            
             <RadioGroup aria-label="favorite" name="favorite" value={radioValue} style={{display: 'initial'}} onChange={handleRadioButton}>
               <h3 style={{marginBottom: 20}}>Favorite</h3>
-              <FormControlLabel value='favorite' control={<Radio />} label="Yes" />
-              <FormControlLabel value='no-favorite' control={<Radio />} label="No" />
+              <FormControlLabel value="favorite" control={<Radio />} label="Yes" />
+              <FormControlLabel value="non-favorite" control={<Radio />} label="No" />
             </RadioGroup>
           </FormControl> 
           <div style={{marginTop: 50}}>

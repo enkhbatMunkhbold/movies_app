@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import { makeStyles } from '@material-ui/core/styles';
 import CardActions from '@mui/material/CardActions';
@@ -23,23 +23,23 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-const MovieCard = ({ movie, handleUpdate, handleRemoveMovie }) => {
-  const {id, name, img_link, genre, favorite} = movie
+const MovieCard = ({ movie, handleRemoveMovie }) => {
+  const { id, name, img_link, genre } = movie
+  const [favorite, setFavorite] = useState(false)
 
   const classes = useStyles();
  
   const handleClick = () => {
+    setFavorite(favorite => !favorite)
     fetch(`http://localhost:3001/movies/${id}`, {
       method: "PATCH",
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        favorite: !favorite 
+        favorite: favorite 
       })
-    }).then(res => res.json())
-      .then(movieData => handleUpdate(movieData))
-      handleRemoveMovie(id)
+    })
   }
 
   const handleDelete = () => {
