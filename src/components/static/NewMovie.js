@@ -87,7 +87,7 @@ const NewMovie = ({ movies, setMovies }) => {
     }).then(res => res.json())
       .then(postedMovie => setMovies([...movies, postedMovie]))
       e.target.reset()
-      setRadioValue(radioValue)
+      // setRadioValue("non-favorite")
   }
 
   return (
