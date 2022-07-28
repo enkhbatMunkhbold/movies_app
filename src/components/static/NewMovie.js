@@ -29,8 +29,8 @@ const NewMovie = ({ movies, setMovies }) => {
     favorite: ''
   })
 
-  let [radioValue, setRadioValue] = useState(false)
-  let [buttonValue, setButtonValue] = useState('non-favorite')
+  const [radioValue, setRadioValue] = useState('non-favorite')
+  // const [buttonValue, setButtonValue] = useState('non-favorite')
   const [state, setState] = React.useState({
     Action: false,
     Drama: false,
@@ -56,12 +56,7 @@ const NewMovie = ({ movies, setMovies }) => {
   }
 
   const handleRadioButton = e => {
-    setButtonValue(e.target.value)
-    if(buttonValue === 'favorite') {
-      setRadioValue(true)
-    } else {
-      setRadioValue(false)
-    }    
+    setRadioValue(e.target.value)
   }
 
   const handleChange = e => {
@@ -79,7 +74,7 @@ const NewMovie = ({ movies, setMovies }) => {
       genre: movieGenreList,
       year: Number(formData.year),
       rating: formData.rating,
-      favorite: radioValue
+      favorite: (radioValue === 'non-favorite') ? false : true
     }
 
     // const objectValues = Object.values(createdMovie)
@@ -93,12 +88,7 @@ const NewMovie = ({ movies, setMovies }) => {
     }).then(res => res.json())
       .then(postedMovie => setMovies([...movies, postedMovie]))
       e.target.reset()
-      if(radioValue) {
-        setRadioValue(false)
-      } else {
-        return radioValue
-      }
-
+      setRadioValue('non-favorite')
       Object.entries(state).map(item => item[1] === true ? setState(false) : item)
   }
 
