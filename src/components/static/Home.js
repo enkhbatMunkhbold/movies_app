@@ -6,6 +6,7 @@ const Home = ({ movies, setMovies, movieList, setFilteredMovies }) => {
   const handleRemoveMovie = (id) => {
     const updatedList = movies.filter(m => !(m.id === id))
     setMovies(updatedList)
+    setFilteredMovies(updatedList)
   }
 
   return (
