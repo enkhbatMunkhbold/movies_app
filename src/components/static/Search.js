@@ -48,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
 const Search = ({ movies, setMovies }) => {
   const classes = useStyles()
   const [searchMovie, setSearchMovie] = useState(null)
+  const api_key = process.env.REACT_APP_KEY
 
   const handleAddMovie = (m) => {
     const movieData = {
@@ -72,7 +73,7 @@ const Search = ({ movies, setMovies }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     if(!movies.includes(searchMovie)){
-      fetch(`http://www.omdbapi.com/?t=${searchMovie}&apikey=19546fcd`)
+      fetch(`http://www.omdbapi.com/?t=${searchMovie}&apikey=${api_key}`)
       .then(res => res.json())
       .then(movieData => handleAddMovie(movieData))
     }    

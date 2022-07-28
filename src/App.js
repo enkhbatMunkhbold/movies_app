@@ -7,13 +7,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const App = () => {
   const [movies, setMovies] = useState([])  
   const[filteredMovies, setFilteredMovies] = useState([])
-  const[searchGenre, setSearchGenre] = useState('')
+  const[searchGenre, setSearchGenre] = useState('All')
   
-  // console.log(process.env.MY_API_KEY)
-
-  // const { MY_API_KEY } = process.env
-  // console.log('MY_API_KEY:', MY_API_KEY); 
-  // console.log(movies)
+  // console.log(process.env.REACT_APP_KEY)
  
   useEffect(() => {
     fetch('http://localhost:3001/movies')
@@ -34,11 +30,11 @@ const App = () => {
       <Routes>
         <Route path="/" 
           element={
-            <Home 
-              setFilteredMovies={setFilteredMovies}
+            <Home               
               movies={movies}
               setMovies={setMovies} 
               movieList={ movieList }
+              setFilteredMovies={setFilteredMovies}
             />
           } 
         />
