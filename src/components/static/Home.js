@@ -10,7 +10,7 @@ const Home = ({ movies, setMovies, movieList, setFilteredMovies }) => {
   }
 
   return (
-    <div style={{backgroundColor: "#ABC9FF"}}>
+    <div>
       <h1 style={{margin: "0px", paddingTop: "20px", color: "blue"}}>Welcome To World Of Movies!</h1>
       <MovieList 
         setFilteredMovies={setFilteredMovies} 

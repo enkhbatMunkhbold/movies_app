@@ -8,8 +8,6 @@ const App = () => {
   const [movies, setMovies] = useState([])  
   const[filteredMovies, setFilteredMovies] = useState([])
   const[searchGenre, setSearchGenre] = useState('All')
-  
-  // console.log(process.env.REACT_APP_KEY)
  
   useEffect(() => {
     fetch('http://localhost:3001/movies')
