@@ -1,7 +1,10 @@
 import React from 'react'
 import MovieList from './MovieList'
 
-const Home = ({ movies, setMovies, movieList, setFilteredMovies }) => {
+const Home = ({ movies, setMovies, movieList, setSearchGenre, setFilteredMovies }) => {
+
+  // const defaultGenre = 'All'
+  // setSearchGenre(defaultGenre)
 
   const handleRemoveMovie = (id) => {
     const updatedList = movies.filter(m => !(m.id === id))

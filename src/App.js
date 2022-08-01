@@ -32,6 +32,7 @@ const App = () => {
               movies={movies}
               setMovies={setMovies} 
               movieList={ movieList }
+              setSearchGenre={setSearchGenre}
               setFilteredMovies={setFilteredMovies}
             />
           } 

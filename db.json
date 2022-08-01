@@ -6,7 +6,7 @@
       "genre": "Crime, Drama",
       "year": 1972,
       "rating": "9.2/10",
-      "favorite": false,
+      "favorite": true,
       "id": 1
     },
     {
@@ -42,7 +42,7 @@
       "genre": "Biography, Drama",
       "year": 1999,
       "rating": "7.3/10",
-      "favorite": false,
+      "favorite": true,
       "id": 5
     },
     {
@@ -60,7 +60,7 @@
       "genre": "Action, Comedy, Crime",
       "year": 1994,
       "rating": "6.9/10",
-      "favorite": false,
+      "favorite": true,
       "id": 7
     },
     {
@@ -105,7 +105,7 @@
       "genre": "Biography, Drama, Romance",
       "year": 1998,
       "rating": "6.9/10",
-      "favorite": false,
+      "favorite": true,
       "id": 12
     },
     {
@@ -123,7 +123,7 @@
       "genre": "Comedy, Drama, Romance",
       "year": 1995,
       "rating": "6.6/10",
-      "favorite": false,
+      "favorite": true,
       "id": 14
     },
     {
@@ -132,7 +132,7 @@
       "genre": "Drama, Romance",
       "year": 1997,
       "rating": "7.9/10",
-      "favorite": false,
+      "favorite": true,
       "id": 15
     },
     {
@@ -141,7 +141,7 @@
       "genre": "Animation, Adventure, Comedy",
       "year": 2003,
       "rating": "8.2/10",
-      "favorite": false,
+      "favorite": true,
       "id": 16
     },
     {
@@ -159,7 +159,7 @@
       "genre": "Action, Crime, Sci-Fi",
       "year": 1997,
       "rating": "7.3/10",
-      "favorite": false,
+      "favorite": true,
       "id": 18
     },
     {
@@ -168,7 +168,7 @@
       "genre": "Documentary",
       "year": 2006,
       "rating": "7.3/10",
-      "favorite": false,
+      "favorite": true,
       "id": 19
     },
     {
@@ -177,7 +177,7 @@
       "genre": "Animation, Adventure, Comedy",
       "year": 2013,
       "rating": "7.4/10",
-      "favorite": false,
+      "favorite": true,
       "id": 20
     },
     {
@@ -186,7 +186,7 @@
       "genre": "Adventure, Comedy, Sci-Fi",
       "year": 1985,
       "rating": "8.5/10",
-      "favorite": false,
+      "favorite": true,
       "id": 21
     },
     {
@@ -204,7 +204,7 @@
       "genre": "Animation, Adventure, Comedy",
       "year": 1998,
       "rating": "7.6/10",
-      "favorite": false,
+      "favorite": true,
       "id": 23
     },
     {
@@ -249,7 +249,7 @@
       "genre": "Action, Adventure, Sci-Fi",
       "year": 2008,
       "rating": "7.9/10",
-      "favorite": false,
+      "favorite": true,
       "id": 28
     },
     {
@@ -267,7 +267,7 @@
       "genre": "Action, Drama, History",
       "year": 2001,
       "rating": "7.7/10",
-      "favorite": false,
+      "favorite": true,
       "id": 30
     },
     {
@@ -276,7 +276,7 @@
       "genre": "Adventure, Western",
       "year": 1966,
       "rating": "8.8/10",
-      "favorite": false,
+      "favorite": true,
       "id": 31
     },
     {
@@ -294,7 +294,7 @@
       "genre": "Action, Biography, Drama",
       "year": 2014,
       "rating": "7.3/10",
-      "favorite": false,
+      "favorite": true,
       "id": 33
     },
     {
@@ -312,7 +312,7 @@
       "genre": "Animation, Adventure, Drama",
       "year": 1994,
       "rating": "8.5/10",
-      "favorite": false,
+      "favorite": true,
       "id": 35
     },
     {
@@ -330,7 +330,7 @@
       "genre": "Drama, Romance",
       "year": 1994,
       "rating": "8.8/10",
-      "favorite": false,
+      "favorite": true,
       "id": 37
     },
     {
@@ -348,7 +348,7 @@
       "genre": "Comedy, Drama, Romance",
       "year": 1998,
       "rating": "6.7/10",
-      "favorite": false,
+      "favorite": true,
       "id": 39
     },
     {
@@ -366,7 +366,7 @@
       "genre": "Drama, Fantasy, Romance",
       "year": 2008,
       "rating": "7.8/10",
-      "favorite": false,
+      "favorite": true,
       "id": 41
     },
     {
@@ -393,7 +393,7 @@
       "genre": "Action, Adventure, Sci-Fi",
       "year": 1993,
       "rating": "8.2/10",
-      "favorite": false,
+      "favorite": true,
       "id": 44
     },
     {
@@ -402,7 +402,7 @@
       "genre": "Comedy, Romance",
       "year": 1987,
       "rating": "6.9/10",
-      "favorite": false,
+      "favorite": true,
       "id": 45
     },
     {
@@ -420,7 +420,7 @@
       "genre": "Animation, Adventure, Comedy",
       "year": 2010,
       "rating": "7.6/10",
-      "favorite": false,
+      "favorite": true,
       "id": 47
     },
     {
@@ -429,7 +429,7 @@
       "genre": "Action, Sci-Fi",
       "year": 1984,
       "rating": "8.1/10",
-      "favorite": false,
+      "favorite": true,
       "id": 48
     },
     {
@@ -438,7 +438,7 @@
       "genre": "Action, Comedy, Crime",
       "year": 2005,
       "rating": "6.5/10",
-      "favorite": false,
+      "favorite": true,
       "id": 49
     },
     {
@@ -447,7 +447,7 @@
       "genre": "Action, Adventure, Thriller",
       "year": 2006,
       "rating": "6.9/10",
-      "favorite": false,
+      "favorite": true,
       "id": 51
     },
     {
@@ -474,7 +474,7 @@
       "genre": "Adventure, Drama, Western",
       "year": 1990,
       "rating": "8.0/10",
-      "favorite": false,
+      "favorite": true,
       "id": 54
     },
     {
@@ -492,7 +492,7 @@
       "genre": "Action, Comedy, Crime",
       "year": 1984,
       "rating": "7.1/10",
-      "favorite": false,
+      "favorite": true,
       "id": 56
     },
     {
@@ -510,7 +510,7 @@
       "genre": "Action, Adventure, Romance",
       "year": 2005,
       "rating": "5.9/10",
-      "favorite": false,
+      "favorite": true,
       "id": 58
     },
     {
@@ -528,7 +528,7 @@
       "genre": "Action, Adventure, Drama",
       "year": null,
       "rating": "9.2/10",
-      "favorite": false,
+      "favorite": true,
       "id": 60
     },
     {
@@ -555,7 +555,7 @@
       "genre": "Action, Comedy, Romance",
       "year": 1980,
       "rating": "9.1/10",
-      "favorite": false,
+      "favorite": true,
       "id": 63
     },
     {
@@ -564,7 +564,7 @@
       "genre": "Comedy, Drama, Romance",
       "year": 2011,
       "rating": "6.3/10",
-      "favorite": false,
+      "favorite": true,
       "id": 64
     },
     {
@@ -582,7 +582,7 @@
       "genre": "Action, Adventure, Drama",
       "year": 2000,
       "rating": "8.5/10",
-      "favorite": false,
+      "favorite": true,
       "id": 66
     },
     {
@@ -591,7 +591,7 @@
       "genre": "Action, Sci-Fi",
       "year": 1999,
       "rating": "8.7/10",
-      "favorite": false,
+      "favorite": true,
       "id": 67
     },
     {
@@ -609,7 +609,7 @@
       "genre": "Animation, Adventure, Comedy",
       "year": 1997,
       "rating": "7.3/10",
-      "favorite": true,
+      "favorite": false,
       "id": 69
     }
   ]
