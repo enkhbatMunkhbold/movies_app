@@ -75,7 +75,10 @@ const Search = ({ movies, setMovies }) => {
     if(!movies.includes(searchMovie)){
       fetch(`http://www.omdbapi.com/?t=${searchMovie}&apikey=${api_key}`)
       .then(res => res.json())
-      .then(movieData => handleAddMovie(movieData))
+      .then(movieData => {
+        handleAddMovie(movieData)
+        console.log("Movie data:", movieData)
+      })
     }    
     e.target.reset()  
     console.log("Movies:", movies)
