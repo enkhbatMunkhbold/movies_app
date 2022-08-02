@@ -71,10 +71,7 @@ const MovieCard = ({ movie, handleUpdate, handleRemoveMovie }) => {
           onClick={handleClick}>
           <FavoriteIcon/>
         </IconButton>
-        {/* < Link to={`/movies/${id}`} style={{textDecoration: "none"}}>Learn More</Link>  */}
-          {/* <Route path={`/movies/${id}`}  element={<MovieDetails movie={movie}/>}/> */}
         <IconButton>
-          {/* <Button size="small">Learn More</Button> */}
           <MovieDetails movie={movie}/>
         </IconButton>          
         <IconButton

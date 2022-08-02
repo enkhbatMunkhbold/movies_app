@@ -53,9 +53,11 @@ const Search = ({ movies, setMovies }) => {
   const handleAddMovie = (m) => {
     const movieData = {
       name: m.Title,
+      actors: m.Actors,
       img_link: m.Poster,
       genre: m.Genre,
       year: Number(m.Year),
+      plot: m.Plot,
       rating: m.Ratings[0].Value,
       favorite: false
     }
