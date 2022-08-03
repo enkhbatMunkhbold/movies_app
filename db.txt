@@ -747,6 +747,17 @@
       "rating": "9.1/10",
       "favorite": true,
       "id": 68
+    },
+    {
+      "name": "The Grudge",
+      "actors": "Sarah Michelle Gellar, Jason Behr, Clea DuVall",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMjIxODg1Nzc3NF5BMl5BanBnXkFtZTcwMjM0MjEzMw@@._V1_SX300.jpg",
+      "genre": "Horror, Mystery, Thriller",
+      "year": 2004,
+      "plot": "An American nurse living and working in Tokyo is exposed to a mysterious supernatural curse, one that locks a person in a powerful rage before claiming their life and spreading to another victim.",
+      "rating": "5.9/10",
+      "favorite": false,
+      "id": 69
     }
   ]
 }

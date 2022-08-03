@@ -23,17 +23,6 @@
       "id": 2
     },
     {
-      "name": "Gone with the Wind",
-      "actors": "Clark Gable, Vivien Leigh, Thomas Mitchell",
-      "img_link": "https://m.media-amazon.com/images/M/MV5BYjUyZWZkM2UtMzYxYy00ZmQ3LWFmZTQtOGE2YjBkNjA3YWZlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
-      "genre": "Drama, Romance, War",
-      "year": 1939,
-      "plot": "The manipulative daughter of a Georgia plantation owner conducts a turbulent romance with a roguish profiteer during the American Civil War and Reconstruction periods.",
-      "rating": "8.2/10",
-      "favorite": false,
-      "id": 3
-    },
-    {
       "name": "Stay",
       "actors": "Ewan McGregor, Naomi Watts, Ryan Gosling",
       "img_link": "https://m.media-amazon.com/images/M/MV5BMjdkNzk1MTUtZGVlYS00MzgyLWFkZjYtMWI4ODg3MzEyNmY4XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg",
@@ -151,19 +140,8 @@
       "year": 1995,
       "plot": "A woman flying to France to confront her straying fiance gets into trouble when the charming crook seated next to her uses her for smuggling.",
       "rating": "6.6/10",
-      "favorite": false,
+      "favorite": true,
       "id": 14
-    },
-    {
-      "name": "Titanic",
-      "actors": "Leonardo DiCaprio, Kate Winslet, Billy Zane",
-      "img_link": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
-      "genre": "Drama, Romance",
-      "year": 1997,
-      "plot": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
-      "rating": "7.9/10",
-      "favorite": false,
-      "id": 15
     },
     {
       "name": "Finding Nemo",
@@ -758,6 +736,17 @@
       "rating": "5.9/10",
       "favorite": false,
       "id": 69
+    },
+    {
+      "name": "Titanic",
+      "actors": "Leonardo DiCaprio, Kate Winslet, Billy Zane",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
+      "genre": "Drama, Romance",
+      "year": 1997,
+      "plot": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+      "rating": "7.9/10",
+      "favorite": false,
+      "id": 70
     }
   ]
 }

@@ -13,15 +13,18 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const MovieList = ({ setFilteredMovies, movieList, setMovies, handleRemoveMovie }) => {  
-
-  // console.log("filteredMovies:", filteredMovies)  
-  // console.log("Movie List:", movieList)
+const MovieList = ({ movies, setMovies, movieList, setFilteredMovies }) => {  
 
   const handleUpdate = (movieObject) => {
     const list = movieList.map(m => m.id === movieObject.id ? movieObject : m)
     setMovies(list)
     setFilteredMovies(list)
+  }
+
+  const handleRemoveMovie = (id) => {
+    const updatedList = movies.filter(m => !(m.id === id))
+    setMovies(updatedList)
+    setFilteredMovies(updatedList)
   }
 
   const movieCards = movieList.map(m => {
@@ -40,11 +43,15 @@ const MovieList = ({ setFilteredMovies, movieList, setMovies, handleRemoveMovie 
   })
 
   return (
-    <Box sx={{ flexGrow: 1 }} style={{ paddingTop: "30px" }}>
-      <Grid container spacing={4}>
-        { movieCards }
-      </Grid>
-    </Box>
+    <div>
+      <h1 style={{ padding: "10px 20px", color: "blue"}}>List Of Movies!</h1> 
+      <Box sx={{ flexGrow: 1 }} style={{ paddingTop: "10px" }}>      
+        <Grid container spacing={4}>
+          { movieCards }
+        </Grid>
+      </Box>
+    </div>
+    
   )
 }
 

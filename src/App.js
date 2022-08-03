@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./components/navigation/Navbar";
 import Home from "./components/static/Home";
 import NewMovie from "./components/static/NewMovie";
+import MovieList from "./components/static/MovieList";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -36,6 +37,17 @@ const App = () => {
               setFilteredMovies={setFilteredMovies}
             />
           } 
+        />
+        <Route path="/movies"
+          element={
+            <MovieList
+              movies={movies}
+              setMovies={setMovies} 
+              movieList={ movieList }
+              setSearchGenre={setSearchGenre}
+              setFilteredMovies={setFilteredMovies}
+            />
+          }
         />
         <Route 
           path="/movies/new" 

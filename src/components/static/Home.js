@@ -1,26 +1,10 @@
 import React from 'react'
-import MovieList from './MovieList'
 
-const Home = ({ movies, setMovies, movieList, setSearchGenre, setFilteredMovies }) => {
-
-  // const defaultGenre = 'All'
-  // setSearchGenre(defaultGenre)
-
-  const handleRemoveMovie = (id) => {
-    const updatedList = movies.filter(m => !(m.id === id))
-    setMovies(updatedList)
-    setFilteredMovies(updatedList)
-  }
+const Home = ({ setMovies, movieList, setFilteredMovies }) => {  
 
   return (
     <div>
-      <h1 style={{margin: "0px", paddingTop: "20px", color: "blue"}}>Welcome To World Of Movies!</h1>
-      <MovieList 
-        setFilteredMovies={setFilteredMovies} 
-        setMovies={setMovies} 
-        movieList={ movieList }
-        handleRemoveMovie={handleRemoveMovie}
-      />
+      <h1 style={{margin: "0px", paddingTop: "20px", color: "blue"}}>Welcome To World Of Movies!</h1>      
     </div>
   )
 }
