@@ -6,7 +6,6 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { makeStyles } from '@material-ui/core/styles';
-// import { MovieSharp } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,15 +21,16 @@ const NewMovie = ({ movies, setMovies }) => {
   const classes = useStyles();
   const [formData, setFormData] = useState({
     name: '',
+    actors: '',
     img_link: '',
     genre: '',
     year: 0,
+    plot: '',
     rating: '',
     favorite: ''
   })
 
   const [radioValue, setRadioValue] = useState('non-favorite')
-  // const [buttonValue, setButtonValue] = useState('non-favorite')
   const [state, setState] = React.useState({
     Action: false,
     Drama: false,
@@ -47,7 +47,7 @@ const NewMovie = ({ movies, setMovies }) => {
   });  
   
   const { Action, Drama, Horror, Comedy, Romance, Mystery, Adventure, Animation, Scifi, Documentary, Thriller, Crime } = state;
-  const paperStyle={padding: '50px 20px 80px', width: 700, margin: "80px auto", height: 700, backgroundColor: "#FEFBE7"}
+  const paperStyle={padding: '50px 20px 80px', width: 700, margin: "80px auto", height: 850, backgroundColor: "#FEFBE7"}
   const headerStyle={margin:20}
   const avatarStyle={backgroundColor: 'blue'}  
   
@@ -70,14 +70,14 @@ const NewMovie = ({ movies, setMovies }) => {
     // console.log("formData:", formData)
     const createdMovie = {
       name: formData.name,
+      actors: formData.actors,
       img_link: formData.img_link,
       genre: movieGenreList,
       year: Number(formData.year),
+      plot: formData.plot,
       rating: formData.rating,
       favorite: (radioValue === 'non-favorite') ? false : true
     }
-
-    // const objectValues = Object.values(createdMovie)
 
     fetch('http://localhost:3001/movies', {
       method: 'POST',
@@ -108,8 +108,15 @@ const NewMovie = ({ movies, setMovies }) => {
         <form onSubmit={handleSubmit}>
           <TextField fullWidth label="Movie Title" placeholder='Enter Movie Title' onChange={handleChange} name='name'/>
           <TextField fullWidth label="Image Link" placeholder='Enter Link Address' onChange={handleChange} name='img_link'/>
+          <TextField fullWidth label="Actors" placeholder="Enter Actors' names" onChange={handleChange} name='actors'/>
           <TextField fullWidth label="Year" placeholder='Enter Year' onChange={handleChange} name='year'/>
           <TextField fullWidth label="Rating" placeholder='Enter Rating' onChange={handleChange} name='rating'/>  
+          <TextField fullWidth multiline label="Plot" 
+                     rows={3} maxRows={5} 
+                     placeholder='Enter short plot...'  
+                     name='plot'
+                     onChange={handleChange}
+          />
           <h3 style={{marginBottom: 0}}>Genre</h3>
           <div className={classes.root}>          
             <FormControl component="fieldset" className={classes.formControl}>
