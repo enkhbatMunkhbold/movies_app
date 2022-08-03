@@ -28,15 +28,7 @@ const App = () => {
       />
       <Routes>
         <Route path="/" 
-          element={
-            <Home               
-              movies={movies}
-              setMovies={setMovies} 
-              movieList={ movieList }
-              setSearchGenre={setSearchGenre}
-              setFilteredMovies={setFilteredMovies}
-            />
-          } 
+          element={ <Home/> } 
         />
         <Route path="/movies"
           element={
