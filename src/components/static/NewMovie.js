@@ -112,7 +112,7 @@ const NewMovie = ({ movies, setMovies }) => {
           <TextField fullWidth label="Year" placeholder='Enter Year' onChange={handleChange} name='year'/>
           <TextField fullWidth label="Rating" placeholder='Enter Rating' onChange={handleChange} name='rating'/>  
           <TextField fullWidth multiline label="Plot" 
-                     rows={3} maxRows={5} 
+                     minRows={3} maxRows={5} 
                      placeholder='Enter short plot...'  
                      name='plot'
                      onChange={handleChange}

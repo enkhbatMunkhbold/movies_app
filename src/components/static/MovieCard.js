@@ -71,9 +71,9 @@ const MovieCard = ({ movie, handleUpdate, handleRemoveMovie }) => {
           onClick={handleClick}>
           <FavoriteIcon/>
         </IconButton>
-        <IconButton>
+        <div>
           <MovieDetails movie={movie}/>
-        </IconButton>          
+        </div>          
         <IconButton
           aria-label='delete'
           onClick={handleDelete}

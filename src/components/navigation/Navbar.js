@@ -82,7 +82,6 @@ const Navbar = ({ movies, setMovies, setFilteredMovies, setSearchGenre }) => {
     setAnchorEl(null)
     handleFilter(e.currentTarget.innerText)
     setSearchGenre(e.currentTarget.innerText)
-    // setFilteredMovies(movies)
   }
 
   return (

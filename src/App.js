@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Navbar from "./components/navigation/Navbar";
 import Home from "./components/static/Home";
 import NewMovie from "./components/static/NewMovie";
@@ -8,13 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const App = () => {
   const [movies, setMovies] = useState([])  
   const[filteredMovies, setFilteredMovies] = useState([])
-  const[searchGenre, setSearchGenre] = useState('All')
- 
-  useEffect(() => {
-    fetch('http://localhost:3001/movies')
-    .then(res => res.json())
-    .then(list => setMovies(list))
-  }, [])  
+  const[searchGenre, setSearchGenre] = useState('All')  
   
   let movieList = (searchGenre === '' || searchGenre === 'All') ? [...movies] : filteredMovies
 
