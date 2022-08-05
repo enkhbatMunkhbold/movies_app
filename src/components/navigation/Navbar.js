@@ -84,6 +84,10 @@ const Navbar = ({ movies, setMovies, setFilteredMovies, setSearchGenre }) => {
     setSearchGenre(e.currentTarget.innerText)
   }
 
+  const handleHomeClick = () => {
+    setSearchGenre('All')
+  }
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -115,7 +119,7 @@ const Navbar = ({ movies, setMovies, setFilteredMovies, setSearchGenre }) => {
             World of Movies
           </Typography>
           <Button color="inherit" component={ Link } to="/">Home</Button>
-          <Button color="inherit" component={ Link } to="/movies">List of Movies</Button>
+          <Button color="inherit" component={ Link } to="/movies" onClick={handleHomeClick}>List of Movies</Button>
           <Button color="inherit" component={ Link } to="/movies/new">Create Movie</Button>
           <Search movies={movies} setMovies={setMovies}/>
         </Toolbar>

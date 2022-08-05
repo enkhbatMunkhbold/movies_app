@@ -13,8 +13,8 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const MovieList = ({ movies, setMovies, movieList, setFilteredMovies }) => {  
-
+const MovieList = ({ movies, setMovies, movieList, setFilteredMovies }) => { 
+  
   useEffect(() => {
     fetch('http://localhost:3001/movies')
     .then(res => res.json())

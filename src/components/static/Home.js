@@ -38,13 +38,13 @@ const useStyles = makeStyles(() => ({
   },
   webInfo: {    
     textAlign: "left",
-    margin: "10% auto 0 65%",
+    margin: "5% 2% 0 65%",
     backgroundColor: "#7FB5FF",
     opacity: "0.85"
   },
   linkToLIstText: {
     textAlign: "left",
-    margin: "0 auto 0 65%",
+    margin: "0 2% 0 65%",
     backgroundColor: "#7FB5FF",
     opacity: "0.85"
   },
@@ -61,7 +61,7 @@ const Home = () => {
   const theme = createTheme({ 
     typography: {
       fontFamily: "Merriweather, sans-serif",
-      fontSize: 15,
+      fontSize: 20,
       fontWeightBold: 200,
     }
   });
@@ -78,22 +78,22 @@ const Home = () => {
         <Grid item xs={2}>
           <img className={classes.picture} src={camera} alt="camera..."/>
         </Grid>    
-        <Grid item xs={8}>
+        <Grid item xs={7}>
           <Typography></Typography>
         </Grid>    
-        <Grid item xs={4} className={classes.webInfo}>
+        <Grid item xs={5} className={classes.webInfo}>
           <Typography theme={theme} style={{color: "#fff"}}>
             Welcome to the World of Movies! In this website you can find any movie you
             want to learn about or create movie data, which's information doesn't 
             exist in our database, and <Link to="/movies/new">add</Link> to it!
           </Typography>
         </Grid>     
-        <Grid item xs={8}>
+        <Grid item xs={7}>
           <Typography></Typography>
         </Grid>    
-        <Grid item xs={4} className={classes.linkToLIstText}>
+        <Grid item xs={5} className={classes.linkToLIstText}>
           <Typography theme={theme} style={{color: "#fff"}}>
-            You can see a full list of our database movies <Link to="/movies/new">HERE!</Link> 
+            You can see a full list of our database movies <Link to="/movies">HERE!</Link> 
           </Typography>
         </Grid>   
         <Grid item xs={3} className={classes.buttonGrid}>
