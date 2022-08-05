@@ -74,21 +74,26 @@ const Search = ({ movies, setMovies }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if(!movies.includes(searchMovie)){
+    let isAlreadyExist = false
+
+    for(let m of movies) {
+      if(m.name.toLowerCase() === searchMovie.toLowerCase()) {        
+        isAlreadyExist = true
+      }
+    }
+
+    if(!isAlreadyExist){
       fetch(`http://www.omdbapi.com/?t=${searchMovie}&apikey=${api_key}`)
       .then(res => res.json())
-      .then(movieData => {
-        handleAddMovie(movieData)
-        console.log("Movie data:", movieData)
-      })
+      .then(movieData => handleAddMovie(movieData))
     }    
     e.target.reset()  
-    console.log("Movies:", movies)
   }
 
-  const handleClick = (e) => {
-    setSearchMovie(e.target.value);
+  const handleClick = (e) => {    
+    setSearchMovie(e.target.value)
   } 
+
   return (
     <div className={classes.search}>  
     <form onSubmit={handleSubmit}>
