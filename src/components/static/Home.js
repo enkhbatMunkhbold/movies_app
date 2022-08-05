@@ -50,7 +50,7 @@ const useStyles = makeStyles(() => ({
   },
   buttonGrid: {
     margin: "10rem auto"
-  },
+  }, 
   icons: {
     paddingRight: "8px"
   }
@@ -65,6 +65,14 @@ const Home = () => {
       fontWeightBold: 200,
     }
   });
+
+  const handleFacebookBtn = () => {
+    window.location.href = 'https://www.facebook.com'
+  }
+
+  const handleTwitterBtn = () => {
+    window.location.href = 'https://www.twitter.com/home'
+  }
 
   return (
     <Box className={classes.root}>
@@ -96,15 +104,15 @@ const Home = () => {
             You can see a full list of our database movies <Link to="/movies">HERE!</Link> 
           </Typography>
         </Grid>   
-        <Grid item xs={3} className={classes.buttonGrid}>
-          <Button variant="outlined" color='primary' size='large' style={{margin: '10px'}}>
+        <Grid item xs={2} className={classes.buttonGrid}>
+          <Button variant="outlined" color='primary' size='large' style={{margin: '10px'}} onClick={handleFacebookBtn}>
             <FontAwesomeIcon icon={faFacebookF} className={classes.icons} />  Share
           </Button>
-          <Button variant="contained" color='primary' size='large' style={{margin: '10px'}}>
+          <Button variant="contained" color='primary' size='large' style={{margin: '10px'}} onClick={handleTwitterBtn}>
             <FontAwesomeIcon icon={faTwitterSquare} className={classes.icons} /> Share
           </Button>
         </Grid> 
-        <Grid item xs={9}>
+        <Grid item xs={10}>
         </Grid>                 
       </Grid>        
     </Box>
