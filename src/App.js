@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { MoviesContext } from "./components/context/movies";
 
 const App = () => {
-  // const [movies, setMovies] = useState([])  
   const[filteredMovies, setFilteredMovies] = useState([])
   const[searchGenre, setSearchGenre] = useState('All')   
   const { movies, setMovies } = useContext(MoviesContext)
@@ -35,9 +34,7 @@ const App = () => {
 
   return (
     <Router>
-      <Navbar 
-        // movies={movies} 
-        // setMovies={setMovies}
+      <Navbar
         setFilteredMovies={setFilteredMovies}
         setSearchGenre={setSearchGenre}
       />
@@ -57,10 +54,7 @@ const App = () => {
         <Route 
           path="/movies/new" 
           element={
-            <NewMovie  
-              // movies={movies} 
-              // setMovies={setMovies}
-            />
+            <NewMovie/>
           } 
         />
       </Routes>      

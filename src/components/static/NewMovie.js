@@ -66,32 +66,44 @@ const NewMovie = () => {
 
   const handleSubmit = e => {
     e.preventDefault() 
-    const movieGenreList = Object.entries(state).filter(item => item[1]).map(item => item[0]).join(', ')   
-    // console.log("Movie Genre List:", movieGenreList)
-    // console.log("formData:", formData)
-    const createdMovie = {
-      name: formData.name,
-      actors: formData.actors,
-      img_link: formData.img_link,
-      genre: movieGenreList,
-      year: Number(formData.year),
-      plot: formData.plot,
-      rating: formData.rating,
-      favorite: (radioValue === 'non-favorite') ? false : true
+    let isAlreadyExist = false
+    for(let movie of movies) {
+      if(movie.name === formData.name) {
+        alert("A movie is already existing in the list!")        
+        isAlreadyExist = true
+        window.history.back()
+      } 
     }
-
-    fetch('http://localhost:3001/movies', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(createdMovie)
-    }).then(res => res.json())
-      .then(postedMovie => setMovies([...movies, postedMovie]))
+      
+    if(!isAlreadyExist) {
+      const movieGenreList = Object.entries(state).filter(item => item[1]).map(item => item[0]).join(', ') 
+      const createdMovie = {
+        name: formData.name,
+        actors: formData.actors,
+        img_link: formData.img_link,
+        genre: movieGenreList,
+        year: Number(formData.year),
+        plot: formData.plot,
+        rating: formData.rating,
+        favorite: (radioValue === 'non-favorite') ? false : true
+      }
+  
+      fetch('http://localhost:3001/movies', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(createdMovie)
+      }).then(res => res.json())
+        .then(postedMovie => {
+          setMovies([...movies, postedMovie])
+          alert("Movie created and added to the list successfully!")
+        })        
+      }
       e.target.reset()
       setRadioValue('non-favorite')
       Object.entries(state).map(item => item[1] === true ? setState(false) : item)
-  }
+  }   
 
   return (
     <div>

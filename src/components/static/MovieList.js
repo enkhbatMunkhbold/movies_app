@@ -38,8 +38,7 @@ const MovieList = ({ movieList, handleUpdate, handleRemoveMovie }) => {
           { movieCards }
         </Grid>
       </Box>
-    </div>
-    
+    </div>    
   )
 }
 

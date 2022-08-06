@@ -82,6 +82,7 @@ const Search = () => {
     for(let m of movies) {
       if(m.name.toLowerCase() === searchMovie.toLowerCase()) {        
         isAlreadyExist = true
+        alert('This movie is already in the list!')
       }
     }
 
@@ -89,6 +90,9 @@ const Search = () => {
       fetch(`http://www.omdbapi.com/?t=${searchMovie}&apikey=${api_key}`)
       .then(res => res.json())
       .then(movieData => handleAddMovie(movieData))
+      .catch(() => {
+        alert("A movie you're searching wasn't found!")   
+      })
     }    
     e.target.reset()  
   }

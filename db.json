@@ -835,6 +835,28 @@
       "rating": "8.0/10",
       "favorite": true,
       "id": 78
+    },
+    {
+      "name": "Rush Hour",
+      "actors": "Jackie Chan, Chris Tucker, Ken Leung",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BYWM2NDZmYmYtNzlmZC00M2MyLWJmOGUtMjhiYmQ2OGU1YTE1L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "genre": "Action, Comedy, Crime",
+      "year": 1998,
+      "plot": "A loyal and dedicated Hong Kong Inspector teams up with a reckless and loudmouthed L.A.P.D. detective to rescue the Chinese Consul's kidnapped daughter, while trying to arrest a dangerous crime lord along the way.",
+      "rating": "7.0/10",
+      "favorite": false,
+      "id": 79
+    },
+    {
+      "name": "Зэрэг нэмэхийн өмнө",
+      "actors": "З. Доржсүрэн, Б. Содном, Д. Жамъянжав",
+      "img_link": "https://mw.motv.mn/assets/vods/2021/11/15/13/vods_951-61923b2d77dc5.png",
+      "genre": "Comedy, Mystery, Adventure",
+      "year": 1964,
+      "plot": "Ардын шог үлгэрийн өгүүлэмжтэй энэ кинонд тайж Мижид нийслэл хүрээ орж, Богд хаанд их өргөл өргөн, зэрэг цол нэмж, шан харамж хүртэхээр явах замд Боролдой, Долдой хэмээх хоёр зарц нь уран цэцэн арга мэх хэрэглэн үргэлж түүнийг даван дийлж байгаа явдлыг инээдмийн аясаар үзүүлжээ.",
+      "rating": "8.5/10",
+      "favorite": true,
+      "id": 80
     }
   ]
 }
