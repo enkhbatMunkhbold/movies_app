@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Grid, Paper, Avatar, Typography, TextField, Button, Checkbox, FormGroup, FormHelperText} from '@material-ui/core';
 import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
 import Radio from '@material-ui/core/Radio';
@@ -6,6 +6,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { makeStyles } from '@material-ui/core/styles';
+import { MoviesContext } from '../context/movies';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
-const NewMovie = ({ movies, setMovies }) => {
+const NewMovie = () => {
+  const { movies, setMovies } = useContext(MoviesContext)
   const classes = useStyles();
   const [formData, setFormData] = useState({
     name: '',

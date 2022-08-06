@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { MoviesProvider } from '../src/components/context/movies'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <MoviesProvider>
     <App />
-  </React.StrictMode>
+  </MoviesProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
 import { alpha, makeStyles } from '@material-ui/core/styles';
+import { MoviesContext } from '../context/movies';
 
 const useStyles = makeStyles((theme) => ({
   search: {
@@ -45,7 +46,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const Search = ({ movies, setMovies }) => {
+const Search = () => {
+
+  const { movies, setMovies } = useContext(MoviesContext)
   const classes = useStyles()
   const [searchMovie, setSearchMovie] = useState(null)
   const api_key = process.env.REACT_APP_KEY

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import Search from '../static/Search'
 import { Menu, MenuItem } from '@material-ui/core';
+import { MoviesContext } from '../context/movies';
 
 const drawerWidth =240;
 
@@ -49,7 +50,8 @@ const useStyles = makeStyles((theme) => ({
   }  
 }));
 
-const Navbar = ({ movies, setMovies, setFilteredMovies, setSearchGenre }) => {
+const Navbar = ({ setFilteredMovies, setSearchGenre }) => {
+  const { movies } = useContext(MoviesContext)
   const genreList = ["All", "Action", "Drama", "Horror", "Comedy", "Romance", "Mystery", "Adventure", "Animation", "Sci-Fi", "Documentary", "Thriller", "Crime"]
     
   const classes = useStyles();
@@ -84,7 +86,7 @@ const Navbar = ({ movies, setMovies, setFilteredMovies, setSearchGenre }) => {
     setSearchGenre(e.currentTarget.innerText)
   }
 
-  const handleHomeClick = () => {
+  const handleListOfMoviesClick = () => {
     setSearchGenre('All')
   }
 
@@ -119,9 +121,9 @@ const Navbar = ({ movies, setMovies, setFilteredMovies, setSearchGenre }) => {
             World of Movies
           </Typography>
           <Button color="inherit" component={ Link } to="/">Home</Button>
-          <Button color="inherit" component={ Link } to="/movies" onClick={handleHomeClick}>List of Movies</Button>
+          <Button color="inherit" component={ Link } to="/movies" onClick={handleListOfMoviesClick}>List of Movies</Button>
           <Button color="inherit" component={ Link } to="/movies/new">Create Movie</Button>
-          <Search movies={movies} setMovies={setMovies}/>
+          <Search/>
         </Toolbar>
       </AppBar>
     </div>

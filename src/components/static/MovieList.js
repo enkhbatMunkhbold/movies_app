@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -13,25 +13,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const MovieList = ({ movies, setMovies, movieList, setFilteredMovies }) => { 
-  
-  useEffect(() => {
-    fetch('http://localhost:3001/movies')
-    .then(res => res.json())
-    .then(list => setMovies(list))
-  }, [setMovies])  
-
-  const handleUpdate = (movieObject) => {
-    const list = movieList.map(m => m.id === movieObject.id ? movieObject : m)
-    setMovies(list)
-    setFilteredMovies(list)
-  }
-
-  const handleRemoveMovie = (id) => {
-    const updatedList = movies.filter(m => !(m.id === id))
-    setMovies(updatedList)
-    setFilteredMovies(updatedList)
-  }
+const MovieList = ({ movieList, handleUpdate, handleRemoveMovie }) => {  
 
   const movieCards = movieList.map(m => {
       return (
