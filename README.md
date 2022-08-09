@@ -29,3 +29,6 @@ If the user want to remove the movie from the list of searched movies, then he/s
 ## Demo
 
 Here is an example of how the app work.
+
+https://user-images.githubusercontent.com/33409864/183747862-307ac23a-52f6-4ed1-8bec-81b4724c16a8.mp4
+
