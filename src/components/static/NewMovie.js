@@ -34,20 +34,24 @@ const NewMovie = () => {
   const [radioValue, setRadioValue] = useState('non-favorite')
   const [state, setState] = React.useState({
     Action: false,
-    Drama: false,
-    Horror: false,
-    Comedy: false,
-    Romance: false,
-    Mystery: false,
     Adventure: false,
     Animation: false,
-    Scifi: false,
-    Documentary: false,
+    Biography: false,
+    Comedy: false,    
+    Crime: false, 
+    Documentary: false,   
+    Drama: false,
+    History: false,
+    Horror: false,    
+    Mystery: false,
+    Romance: false,    
+    Scifi: false,    
     Thriller: false,
-    Crime: false
-  });  
+    War: false,
+    Western: false
+  }); 
   
-  const { Action, Drama, Horror, Comedy, Romance, Mystery, Adventure, Animation, Scifi, Documentary, Thriller, Crime } = state;
+  const { Action, Adventure, Animation, Biography, Comedy, Crime, Documentary, Drama, History, Horror, Mystery, Romance, Scifi, Thriller, War, Western} = state;
   const paperStyle={padding: '50px 20px 80px', width: 700, margin: "80px auto", height: 850, backgroundColor: "#FEFBE7"}
   const headerStyle={margin:20}
   const avatarStyle={backgroundColor: 'blue'}  
@@ -139,12 +143,16 @@ const NewMovie = () => {
                   label="Action"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={Drama} onChange={handleCheck} name="Drama" />}
-                  label="Drama"
+                  control={<Checkbox checked={Adventure} onChange={handleCheck} name="Adventure" />}
+                  label="Adventure"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={Horror} onChange={handleCheck} name="Horror" />}
-                  label="Horror"
+                  control={<Checkbox checked={Animation} onChange={handleCheck} name="Animation" />}
+                  label="Animation"
+                />
+                 <FormControlLabel
+                  control={<Checkbox checked={Biography} onChange={handleCheck} name="Biography" />}
+                  label="Biography"
                 />
               </FormGroup>
             </FormControl>
@@ -155,12 +163,16 @@ const NewMovie = () => {
                   label="Comedy"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={Romance} onChange={handleCheck} name="Romance" />}
-                  label="Romance"
+                  control={<Checkbox checked={Crime} onChange={handleCheck} name="Crime" />}
+                  label="Crime"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={Mystery} onChange={handleCheck} name="Mystery" />}
-                  label="Mystery"
+                  control={<Checkbox checked={Documentary} onChange={handleCheck} name="Documentary" />}
+                  label="Documentary"
+                />
+                 <FormControlLabel
+                  control={<Checkbox checked={Drama} onChange={handleCheck} name="Drama" />}
+                  label="Drama"
                 />
               </FormGroup>
               <FormHelperText>Pick all that applies</FormHelperText>
@@ -168,32 +180,40 @@ const NewMovie = () => {
             <FormControl component="fieldset" className={classes.formControl}>
               <FormGroup>
                 <FormControlLabel
-                  control={<Checkbox checked={Adventure} onChange={handleCheck} name="Adventure" />}
-                  label="Adventure"
+                  control={<Checkbox checked={History} onChange={handleCheck} name="History" />}
+                  label="History"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={Animation} onChange={handleCheck} name="Animation" />}
-                  label="Animation"
+                  control={<Checkbox checked={Horror} onChange={handleCheck} name="Horror" />}
+                  label="Horror"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={Scifi} onChange={handleCheck} name="Scifi" />}
-                  label="Sci-Fi"
+                  control={<Checkbox checked={Mystery} onChange={handleCheck} name="Mystery" />}
+                  label="Mystery"
+                />
+                 <FormControlLabel
+                  control={<Checkbox checked={Romance} onChange={handleCheck} name="Romance" />}
+                  label="Romance"
                 />
               </FormGroup>
             </FormControl>
             <FormControl component="fieldset" className={classes.formControl}>
               <FormGroup>
                 <FormControlLabel
-                  control={<Checkbox checked={Documentary} onChange={handleCheck} name="Documentary" />}
-                  label="Documentary"
+                  control={<Checkbox checked={Scifi} onChange={handleCheck} name="Scifi" />}
+                  label="Sci-Fi"
                 />
                 <FormControlLabel
                   control={<Checkbox checked={Thriller} onChange={handleCheck} name="Thriller" />}
                   label="Thriller"
                 />
                 <FormControlLabel
-                  control={<Checkbox checked={Crime} onChange={handleCheck} name="Crime" />}
-                  label="Crime"
+                  control={<Checkbox checked={War} onChange={handleCheck} name="War" />}
+                  label="War"
+                />
+                 <FormControlLabel
+                  control={<Checkbox checked={Western} onChange={handleCheck} name="Western" />}
+                  label="Western"
                 />
               </FormGroup>
             </FormControl>
@@ -205,7 +225,7 @@ const NewMovie = () => {
               <FormControlLabel value="non-favorite" control={<Radio />} label="No" />
             </RadioGroup>
           </FormControl> 
-          <div style={{marginTop: 50}}>
+          <div style={{marginTop: 20}}>
             <Button type="submit" variant="contained" color="primary">Create Movie</Button>
           </div>             
         </form>

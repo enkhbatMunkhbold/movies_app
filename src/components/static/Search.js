@@ -89,7 +89,10 @@ const Search = () => {
     if(!isAlreadyExist){
       fetch(`http://www.omdbapi.com/?t=${searchMovie}&apikey=${api_key}`)
       .then(res => res.json())
-      .then(movieData => handleAddMovie(movieData))
+      .then(movieData => {
+        handleAddMovie(movieData)
+        alert("A movie was successfully added to the list!")
+      })
       .catch(() => {
         alert("A movie you're searching wasn't found!")   
       })

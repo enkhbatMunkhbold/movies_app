@@ -1,14 +1,14 @@
 # World of Movies
 
-**World of Movies** app helps user to search any movie he/she wants to learn about and creates a list of movies, that searched. User can sort the list by genre, by clicking a menu button, which is on the top left side and shows list of the movie genres. A user can make a movie favorite if user likes it, by clicking on a heart symbol. If user doesn't want to keep a movie in the list, then can delete it. Also, user can learn about a movie more, by clicking on 'Learn More.' User even can create and insert user's own movie info into the list, by going to 'Create Movie' page. 
+**World of Movies** app helps user to search any movie he/she wants to learn about and creates a list of movies, that searched. User can sort the list by genre, by clicking a menu button, which is on the top left side of the screen and shows list of the movie genres. A user can make a movie favorite if user likes it, by clicking on a heart symbol or vice versa. If user doesn't want to keep a movie in the list, then can delete it by hitting on trash can symbol. Also, user can learn about a movie more, by clicking on 'Learn More.' User even can create and insert user's own movie info into the list, by going to 'Create Movie' page. 
 
-# Goal
+## Goal
 
 World of Movies app is built, to demonstrate my skills on React, which I have learned in Phase-2 of the Flatiron school, using React components, states, hooks and routing, plus Material-UI, to build my website, which gives to a user awesome, friendly experience to learn about any movies he or she want to learn. 
 
 ## Work environment
 
-The app works locally, using url addresss 'http://localhost:3000' which means it is hosted in node server and on port 3000. Also, one can visit this website with the link https://idyllic-dolphin-bd7a83.netlify.app
+The app works locally, using url addresss <http://localhost:3000> which means it is hosted in node server and on port 3000. Also, one can visit this website with the link <https://idyllic-dolphin-bd7a83.netlify.app>
 
 ## Search Movies
 

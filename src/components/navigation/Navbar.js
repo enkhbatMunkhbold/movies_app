@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Navbar = ({ setFilteredMovies, setSearchGenre }) => {
   const { movies } = useContext(MoviesContext)
-  const genreList = ["All", "Action", "Drama", "Horror", "Comedy", "Romance", "Mystery", "Adventure", "Animation", "Sci-Fi", "Documentary", "Thriller", "Crime"]
+  const genreList = ["Action", "Adventure", "All", "Animation", "Biography", "Comedy", "Crime", "Documentary", "Drama", "History", "Horror", "Mystery", "Romance", "Sci-Fi", "Thriller", "War", "Western"]
     
   const classes = useStyles();
   const[anchorEl, setAnchorEl] = useState(null);
