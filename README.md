@@ -35,5 +35,4 @@ If the user want to remove the movie from the list of searched movies, then he/s
 
 ## Demo
 
-Here is an example of how the app works.
 ![World of Movies](https://user-images.githubusercontent.com/33409864/189276886-c845b389-a5e1-4852-963b-ba47f044af1f.gif)
