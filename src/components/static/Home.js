@@ -10,6 +10,8 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import Counter from './Counter';
+
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -115,6 +117,7 @@ const Home = () => {
         <Grid item xs={10}>
         </Grid>                 
       </Grid>
+      <Counter />
     </Box>
   )
 }

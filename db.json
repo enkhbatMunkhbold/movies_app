@@ -96,7 +96,7 @@
       "year": 2009,
       "plot": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
       "rating": "7.8/10",
-      "favorite": true,
+      "favorite": false,
       "id": 40
     },
     {
@@ -109,6 +109,94 @@
       "rating": "8.7/10",
       "favorite": false,
       "id": 41
+    },
+    {
+      "name": "Aladdin",
+      "actors": "Scott Weinger, Robin Williams, Linda Larkin",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BY2Q2NDI1MjUtM2Q5ZS00MTFlLWJiYWEtNTZmNjQ3OGJkZDgxXkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg",
+      "genre": "Animation, Adventure, Comedy",
+      "year": 1992,
+      "plot": "A kindhearted street urchin and a power-hungry Grand Vizier vie for a magic lamp that has the power to make their deepest wishes come true.",
+      "rating": "8.0/10",
+      "favorite": false,
+      "id": 42
+    },
+    {
+      "name": "Rocky",
+      "actors": "Sylvester Stallone, Talia Shire, Burt Young",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BNTBkMjg2MjYtYTZjOS00ODQ0LTg0MDEtM2FiNmJmOGU1NGEwXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg",
+      "genre": "Drama, Sport",
+      "year": 1976,
+      "plot": "A small-time Philadelphia boxer gets a supremely rare chance to fight the world heavyweight champion in a bout in which he strives to go the distance for his self-respect.",
+      "rating": "8.1/10",
+      "favorite": false,
+      "id": 43
+    },
+    {
+      "name": "Rambo",
+      "actors": "Sylvester Stallone, Julie Benz, Matthew Marsden",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMTI5Mjg1MzM4NF5BMl5BanBnXkFtZTcwNTAyNzUzMw@@._V1_SX300.jpg",
+      "genre": "Action, Adventure, Thriller",
+      "year": 2008,
+      "plot": "In Thailand, John Rambo joins a group of mercenaries to venture into war-torn Burma, and rescue a group of Christian aid workers who were kidnapped by the ruthless local infantry unit.",
+      "rating": "7.0/10",
+      "favorite": false,
+      "id": 44
+    },
+    {
+      "name": "The Lion King",
+      "actors": "Matthew Broderick, Jeremy Irons, James Earl Jones",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BZGRiZDZhZjItM2M3ZC00Y2IyLTk3Y2MtMWY5YjliNDFkZTJlXkEyXkFqcGc@._V1_SX300.jpg",
+      "genre": "Animation, Adventure, Drama",
+      "year": 1994,
+      "plot": "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
+      "rating": "8.5/10",
+      "favorite": false,
+      "id": 46
+    },
+    {
+      "name": "Gladiator",
+      "actors": "Russell Crowe, Joaquin Phoenix, Connie Nielsen",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BYWQ4YmNjYjEtOWE1Zi00Y2U4LWI4NTAtMTU0MjkxNWQ1ZmJiXkEyXkFqcGc@._V1_SX300.jpg",
+      "genre": "Action, Adventure, Drama",
+      "year": 2000,
+      "plot": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+      "rating": "8.5/10",
+      "favorite": true,
+      "id": 48
+    },
+    {
+      "name": "Aladdin",
+      "actors": "Scott Weinger, Robin Williams, Linda Larkin",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BMmQwYWZjZGItYzc0OC00ZDllLTg3NjItOWIyOWYwMDljMjAyXkEyXkFqcGc@._V1_SX300.jpg",
+      "genre": "Animation, Adventure, Comedy",
+      "year": 1992,
+      "plot": "A kind-hearted street urchin and a power-hungry Grand Vizier vie for a magic lamp that has the power to make their deepest wishes come true.",
+      "rating": "8.0/10",
+      "favorite": false,
+      "id": 49
+    },
+    {
+      "name": "Batman",
+      "actors": "Michael Keaton, Jack Nicholson, Kim Basinger",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg",
+      "genre": "Action, Adventure",
+      "year": 1989,
+      "plot": "The Dark Knight of Gotham City begins his war on crime with his first major enemy being Jack Napier, a criminal who becomes the clownishly homicidal Joker.",
+      "rating": "7.5/10",
+      "favorite": false,
+      "id": 50
+    },
+    {
+      "name": "Hahaha",
+      "actors": "Kim Sang-kyung, Moon So-ri, Yoo Joon-sang",
+      "img_link": "https://m.media-amazon.com/images/M/MV5BZGI2ZDdhODQtOGU5MC00NzAxLWJlMWQtOWQ5N2U0NWY3NGIwXkEyXkFqcGc@._V1_SX300.jpg",
+      "genre": "Comedy, Drama, Romance",
+      "year": 2010,
+      "plot": "Two friends, while having drinks together, share their memories of visiting the seaside resort of Tongyeong.",
+      "rating": "6.8/10",
+      "favorite": true,
+      "id": 51
     }
   ]
 }
