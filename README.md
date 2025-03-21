@@ -40,3 +40,5 @@ If user wants to see the movies of certain genre, then should click on the menu 
 If the user want to remove the movie from the list of searched movies, then he/she would click on trash can symbol of a particular movie, which is on the bottom right corner of every movie, and the movie will disappear from the list, will be removed from the backend as well. 
 
 ## Demo
+
+![World of Movies](https://github.com/user-attachments/assets/dabfd2ab-fafe-4124-b79d-75e6c2176540)
