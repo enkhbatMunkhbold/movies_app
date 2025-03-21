@@ -41,7 +41,12 @@ If the user want to remove the movie from the list of searched movies, then he/s
 
 ## Demo
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ![World of Movies](https://user-images.githubusercontent.com/33409864/189276886-c845b389-a5e1-4852-963b-ba47f044af1f.gif)
 >>>>>>> origin/main
+=======
+
+![World of Movies](https://github.com/user-attachments/assets/dabfd2ab-fafe-4124-b79d-75e6c2176540)
+>>>>>>> refs/remotes/origin/main
